@@ -10,7 +10,7 @@ const SidebarLayout: FC<SidebarLayoutProps> = ({ expanded, onFileClick }) => (
   <aside className={css.sidebar}>
     <div className={css.altWrap}>
       <div className={clsx(css.alt, { [css.active]: expanded })} onClick={onFileClick}>
-        <VscFiles className={clsx(css.alt, { [css.active]: expanded })} />
+        <VscFiles className={clsx(css.altIcon, { [css.active]: expanded })} />
       </div>
       <div className={css.alt}>
         <VscDebugAlt className={css.altIcon} />
