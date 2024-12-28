@@ -1,0 +1,26 @@
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  padding: .4rem .6rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: var(--active);
+}
+
+.heading {
+  letter-spacing: .2rem;
+  color: var(--foreground-light);
+  text-transform: uppercase;
+  font-size: .8rem;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-light);
+  border-radius: .3rem;
+  padding: .26rem 6%;
+  margin: auto;
+  font-weight: 400;
+}

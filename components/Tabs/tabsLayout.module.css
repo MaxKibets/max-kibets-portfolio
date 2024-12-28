@@ -1,0 +1,12 @@
+.wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabs {
+  display: flex;
+}
+
+.pinned {
+  border-right: 1px solid var(--border-light);
+}
