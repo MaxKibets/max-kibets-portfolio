@@ -59,7 +59,7 @@ a {
 }
 
 button svg {
-    display: block;
+  display: block;
 }
 
 @media screen and (width <= 1024px) {
