@@ -24,13 +24,6 @@
   &.active {
     box-shadow: inset 1.5px 0 0 var(--active);
   }
-
-  &.active,
-  &:hover {
-    svg {
-      color: var(--foreground-light);
-    }
-  }
 }
 
 .altIcon {
@@ -38,6 +31,11 @@
   font-size: 1.5rem;
   color: var(--foreground);
   transition: all 0.2s;
+
+  &.active,
+  &:hover {
+    color: var(--foreground-light);
+  }
 }
 
 .explorer {
