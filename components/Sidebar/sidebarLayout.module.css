@@ -19,17 +19,7 @@
 .alt {
   padding: 0.75rem;
   cursor: pointer;
-
-  &,
-  svg {
-    transition: all 0.2s;
-  }
-
-  svg {
-    display: block;
-    font-size: 1.5rem;
-    color: var(--foreground);
-  }
+  transition: all 0.2s;
 
   &.active {
     box-shadow: inset 1.5px 0 0 var(--active);
@@ -41,6 +31,13 @@
       color: var(--foreground-light);
     }
   }
+}
+
+.altIcon {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--foreground);
+  transition: all 0.2s;
 }
 
 .explorer {

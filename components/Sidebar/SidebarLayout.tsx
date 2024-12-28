@@ -13,7 +13,7 @@ const SidebarLayout: FC<SidebarLayoutProps> = ({ expanded, onFileClick }) => (
         <VscFiles />
       </div>
       <div className={css.alt}>
-        <VscDebugAlt />
+        <VscDebugAlt className={css.altIcon} />
       </div>
     </div>
     <div className={clsx(css.explorer, { [css.expanded]: expanded })}>

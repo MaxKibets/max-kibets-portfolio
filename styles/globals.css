@@ -58,6 +58,10 @@ a {
   text-decoration: none;
 }
 
+button svg {
+    display: block;
+}
+
 @media screen and (width <= 1024px) {
   body {
     grid-template: "header header" auto "aside main" 1fr / 3rem calc(100vw - 3rem);
