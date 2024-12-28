@@ -4,7 +4,9 @@
   position: relative;
 }
 
-.sidebar, .altWrap, .explorer {
+.sidebar,
+.altWrap,
+.explorer {
   background: var(--background);
 }
 
@@ -15,24 +17,26 @@
 }
 
 .alt {
-  padding: .75rem;
+  padding: 0.75rem;
   cursor: pointer;
 
-  &, svg {
-    transition: all .2s;
+  &,
+  svg {
+    transition: all 0.2s;
   }
-  
+
   svg {
     display: block;
     font-size: 1.5rem;
     color: var(--foreground);
   }
-  
+
   &.active {
     box-shadow: inset 1.5px 0 0 var(--active);
   }
-  
-  &.active, &:hover {
+
+  &.active,
+  &:hover {
     svg {
       color: var(--foreground-light);
     }
@@ -40,14 +44,14 @@
 }
 
 .explorer {
-  padding: .6rem 0;
+  padding: 0.6rem 0;
   transform: scale(0, 1);
-  transform-origin: 0 50% ;
-  transition: all .2s;
-  
+  transform-origin: 0 50%;
+  transition: all 0.2s;
+
   &.expanded {
     width: 12rem;
-    padding: .6rem .8rem;
+    padding: 0.6rem 0.8rem;
     transform: scale(1);
     border-right: 1px solid var(--border);
   }
@@ -61,4 +65,3 @@
     }
   }
 }
-
