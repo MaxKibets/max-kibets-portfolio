@@ -24,7 +24,7 @@ const TabsLayout: FC<TabsLayoutProps> = ({ tabs, onCloseClick }) => (
           <NavLink
             key={href}
             href={href}
-            title={getTitleByHref(href)}
+            text={getTitleByHref(href)}
             prefixIcon={<VscFileCode />}
             suffixIcon={
               <Button

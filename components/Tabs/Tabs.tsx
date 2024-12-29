@@ -23,11 +23,11 @@ const Tabs = () => {
   }, [pathname]);
 
   const handleCloseTab: CloseClickCallback = ({ href, event }) => {
+    event.stopPropagation();
+
     if (href === ROUTES.MAIN) {
       return;
     }
-
-    event.preventDefault();
 
     // Remove tab from the list
     setTabs((prevTabs) => prevTabs.filter((tab) => tab !== href));

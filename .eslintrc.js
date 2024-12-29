@@ -1,14 +1,24 @@
 /* eslint-env node */
 module.exports = {
   root: true,
-  extends: ["next/core-web-vitals", "prettier"],
-  plugins: ["@typescript-eslint"],
+  extends: [
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  plugins: [
+    "@typescript-eslint"
+  ],
   parser: "@typescript-eslint/parser",
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
+      files: [
+        "*.ts",
+        "*.tsx"
+      ],
       parserOptions: {
-        project: ["./tsconfig.json"],
+        project: [
+          "./tsconfig.json"
+        ],
         projectService: true,
         tsconfigRootDir: __dirname,
       },

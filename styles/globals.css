@@ -56,13 +56,19 @@ main {
 a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--foreground-light);
+  }
 }
 
-button svg {
+svg {
   display: block;
 }
 
-@media screen and (width <= 1024px) {
+@media screen and (width <=1024px) {
   body {
     grid-template: "header header" auto "aside main" 1fr / 3rem calc(100vw - 3rem);
   }

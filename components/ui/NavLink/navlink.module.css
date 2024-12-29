@@ -1,34 +1,14 @@
-.link {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  font-size: 0.9rem;
-  transition: color 0.2s;
+.active {
+  color: var(--active);
 
-  &:not(.indented) {
-    padding: 0.25rem 0;
+  &:not(.underlined) {
+    background-color: var(--background-dark);
+    box-shadow:
+      0.8rem 0 0 var(--background-dark),
+      calc(-0.2rem + -0.3rem + -0.8rem + -1px) 0 0 var(--background-dark);
   }
 
-  &.indented {
-    padding: 0.6rem;
-  }
-
-  &:hover {
-    color: var(--foreground-light);
-  }
-
-  &.active {
-    color: var(--active);
-
-    &:not(.underlined) {
-      background-color: var(--background-dark);
-      box-shadow:
-        0.8rem 0 0 var(--background-dark),
-        calc(-0.2rem + -0.3rem + -0.8rem + -1px) 0 0 var(--background-dark);
-    }
-
-    &.underlined {
-      box-shadow: inset 0 -1.5px 0 var(--active);
-    }
+  &.underlined {
+    box-shadow: inset 0 -1.5px 0 var(--active);
   }
 }

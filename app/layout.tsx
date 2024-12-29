@@ -4,6 +4,7 @@ import { Inconsolata } from "next/font/google";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import Tabs from "@/components/Tabs";
+import ProgressBar from "@/components/ProgressBar";
 
 import "../styles/globals.css";
 
@@ -31,6 +32,7 @@ export default async function RootLayout({
         <Sidebar />
         <main>
           <Tabs />
+          <ProgressBar />
           {children}
         </main>
       </body>

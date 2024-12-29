@@ -1,0 +1,22 @@
+.iconLabel {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+
+  &:not(.indented) {
+    padding: 0.25rem 0;
+  }
+
+  &.indented {
+    padding: 0.6rem;
+  }
+
+  &.clickable {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--foreground-light);
+    }
+  }
+}

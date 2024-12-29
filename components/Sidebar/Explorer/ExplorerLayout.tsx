@@ -8,7 +8,7 @@ import {
 } from "react-icons/vsc";
 import clsx from "clsx";
 
-import { Button, NavLink } from "@/components/ui";
+import { Button, IconLabel, NavLink } from "@/components/ui";
 import { ROUTES } from "@/constants/routes";
 import { getTitleByHref } from "@/utils";
 
@@ -30,11 +30,10 @@ const ExplorerLayout: FC<ExplorerLayoutProps> = ({ onClick, expanded }) => (
         {expanded ? <VscCollapseAll /> : <VscExpandAll />}
       </Button>
     </div>
-    <NavLink
-      href={"#"}
+    <IconLabel
       onClick={onClick}
       prefixIcon={expanded ? <VscFolderOpened /> : <VscFolder />}
-      title={TEXT.PAGES}
+      text={TEXT.PAGES}
     />
     <nav className={clsx(css.nav, { [css.expanded]: expanded })}>
       <ul className={css.list}>
@@ -42,8 +41,8 @@ const ExplorerLayout: FC<ExplorerLayoutProps> = ({ onClick, expanded }) => (
           <li key={href}>
             <NavLink
               href={href}
-              title={getTitleByHref(href)}
               prefixIcon={<VscFileCode />}
+              text={getTitleByHref(href)}
             />
           </li>
         ))}

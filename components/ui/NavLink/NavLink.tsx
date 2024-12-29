@@ -1,40 +1,44 @@
 "use client";
 
-import { FC } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { FC, startTransition } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import clsx from "clsx";
 
 import { NavLinkProps } from "./types";
 import css from "./navlink.module.css";
+import IconLabel from "../IconLabel";
 
 const NavLink: FC<NavLinkProps> = ({
   href,
-  title,
-  prefixIcon,
-  suffixIcon,
   onClick,
   underlined,
-  indented,
   className,
+  text,
+  prefixIcon,
+  suffixIcon,
+  indented,
 }) => {
+  const { push } = useRouter();
   const pathname = usePathname();
-  const isActive = href === pathname;
+
+  const handleClick = () => {
+    onClick?.();
+    href && startTransition(() => push(href));
+  };
 
   return (
-    <Link
-      className={clsx(css.link, className, {
-        [css.active]: isActive,
+    <IconLabel
+      tag="a"
+      className={clsx(className, {
+        [css.active]: href === pathname,
         [css.underlined]: underlined,
-        [css.indented]: indented,
       })}
-      href={href}
-      onClick={onClick}
-    >
-      {prefixIcon}
-      {title}
-      {suffixIcon}
-    </Link>
+      indented={indented}
+      text={text}
+      prefixIcon={prefixIcon}
+      suffixIcon={suffixIcon}
+      onClick={handleClick}
+    />
   );
 };
 
