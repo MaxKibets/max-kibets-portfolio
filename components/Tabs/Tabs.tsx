@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { redirect, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import { ROUTES } from "@/constants/routes";
 import { Route } from "@/types/shared";
+import { usePageTransition } from "@/hooks/usePageTransition";
+
 import TabsLayout from "./TabsLayout";
 import { CloseClickCallback } from "./types";
 
 const Tabs = () => {
   const pathname = usePathname() as Route;
   const [tabs, setTabs] = useState<Route[]>([ROUTES.MAIN]);
+  const changeRoute = usePageTransition();
 
   useEffect(() => {
     const isTabOpened = tabs.includes(pathname);
@@ -34,7 +37,7 @@ const Tabs = () => {
 
     // Go to the previous tab if the current one is closed
     if (href === pathname) {
-      redirect(tabs[tabs.indexOf(href) - 1]);
+      changeRoute(tabs[tabs.indexOf(href) - 1]);
     }
   };
 

@@ -1,6 +1,7 @@
+import { Route } from "@/types/shared";
+
 export type NavLinkProps = {
-  href: string;
-  onClick?: () => void;
+  href: Route;
   underlined?: boolean;
   className?: string;
   text: string;

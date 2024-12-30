@@ -1,16 +1,17 @@
 "use client";
 
-import { FC, startTransition } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { FC } from "react";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
+import { usePageTransition } from "@/hooks/usePageTransition";
+
+import IconLabel from "../IconLabel";
 import { NavLinkProps } from "./types";
 import css from "./navlink.module.css";
-import IconLabel from "../IconLabel";
 
 const NavLink: FC<NavLinkProps> = ({
   href,
-  onClick,
   underlined,
   className,
   text,
@@ -18,13 +19,8 @@ const NavLink: FC<NavLinkProps> = ({
   suffixIcon,
   indented,
 }) => {
-  const { push } = useRouter();
   const pathname = usePathname();
-
-  const handleClick = () => {
-    onClick?.();
-    href && startTransition(() => push(href));
-  };
+  const changeRoute = usePageTransition();
 
   return (
     <IconLabel
@@ -37,7 +33,7 @@ const NavLink: FC<NavLinkProps> = ({
       text={text}
       prefixIcon={prefixIcon}
       suffixIcon={suffixIcon}
-      onClick={handleClick}
+      onClick={() => changeRoute(href)}
     />
   );
 };
