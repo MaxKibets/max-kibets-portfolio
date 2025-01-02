@@ -3,8 +3,8 @@
 import { createContext, FC } from "react";
 
 import { WithChildren } from "@/types/shared";
+import { Progress } from "@/components/ui";
 
-import ProgressBarLayout from "./ProgressBarLayout";
 import { useProgress } from "./hooks";
 import { ProgressBarContextType } from "./types";
 
@@ -15,7 +15,7 @@ const ProgressBar: FC<WithChildren> = ({ children }) => {
 
   return (
     <ProgressBarContext.Provider value={setProgressState}>
-      <ProgressBarLayout value={value} />
+      <Progress value={value} />
       {children}
     </ProgressBarContext.Provider>
   );
