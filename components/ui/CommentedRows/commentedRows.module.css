@@ -1,0 +1,25 @@
+.wrap {
+  position: relative;
+  margin: var(--indent) 0;
+  padding: var(--indent) 0 var(--indent) 1.5rem;
+  background-image: url('data:image/svg+xml,<svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4 14.192L9.136 13.184L11.136 11.008L8.56 10.24L9.12 8.8L11.472 10L11.152 7.36H12.976L12.576 10L14.864 8.912L15.456 10.272L12.88 10.992L14.816 13.184L13.536 14.176L12 11.68L10.4 14.192Z" fill="%23C3E88D" fill-opacity="0.564706"/></svg>');
+  background-repeat: repeat-y;
+  color: #c3e88d90;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    background: var(--background-light);
+  }
+
+  &::before {
+    content: '/**';
+    top: 0;
+  }
+
+  &::after {
+    content: '\00a0*/';
+    bottom: 0;
+  }
+}
