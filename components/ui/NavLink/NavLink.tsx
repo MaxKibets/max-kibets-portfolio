@@ -20,10 +20,11 @@ const NavLink: FC<NavLinkProps> = ({
   indented,
 }) => {
   const pathname = usePathname();
-  const changeRoute = usePageTransition();
-
+  const toNextPage = usePageTransition();
+  
   return (
     <IconLabel
+      // Do not use next/link here, because we want to use the custom transition
       tag="a"
       className={clsx(className, {
         [css.active]: href === pathname,
@@ -33,7 +34,7 @@ const NavLink: FC<NavLinkProps> = ({
       text={text}
       prefixIcon={prefixIcon}
       suffixIcon={suffixIcon}
-      onClick={() => changeRoute(href)}
+      onClick={() => toNextPage(href)}
     />
   );
 };

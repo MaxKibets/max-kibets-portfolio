@@ -7,8 +7,7 @@
   transition: all 0.2s;
   color: var(--foreground);
 
-  &:active,
-  &:hover {
+  &:active:not(:disabled) {
     color: var(--foreground-light);
   }
 
@@ -16,5 +15,6 @@
     border-radius: 0.15rem;
     box-shadow: 0 0 0 0.15rem var(--foreground-dark);
     background-color: var(--foreground-dark);
+    color: var(--foreground-light);
   }
 }

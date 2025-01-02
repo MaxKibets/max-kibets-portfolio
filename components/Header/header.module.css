@@ -13,14 +13,12 @@
 }
 
 .heading {
-  letter-spacing: 0.2rem;
   color: var(--foreground-light);
-  text-transform: uppercase;
   font-size: 0.8rem;
   background-color: var(--background-light);
   border: 1px solid var(--border-light);
   border-radius: 0.3rem;
-  padding: 0.26rem 6%;
+  padding: 0.1rem 6%;
   margin: auto;
   font-weight: 400;
 }

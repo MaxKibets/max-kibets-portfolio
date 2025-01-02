@@ -5,7 +5,7 @@ import { useToggle } from "@/hooks/useToggle";
 import SidebarLayout from "./SidebarLayout";
 
 const Sidebar = () => {
-  const [expanded, toggleExpanded] = useToggle(true);
+  const [expanded, toggleExpanded] = useToggle(false);
 
   return <SidebarLayout expanded={expanded} onFileClick={toggleExpanded} />;
 };

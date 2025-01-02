@@ -5,11 +5,11 @@
   font-size: 0.9rem;
 
   &:not(.indented) {
-    padding: 0.25rem 0;
+    padding: 0.15rem 0;
   }
 
   &.indented {
-    padding: 0.6rem;
+    padding: 0.5rem 0.6rem;
   }
 
   &.clickable {

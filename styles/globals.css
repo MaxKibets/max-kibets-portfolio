@@ -1,10 +1,16 @@
 :root {
+  --size: 16px;
+  --line-height: 1.375;
+  --indent: calc(var(--size) * var(--line-height));
   --border: #00000060;
   --border-light: #4a4a4a;
   --background: #1a1a1a;
   --background-light: #212121;
+  --background-dark: #00000030;
   --foreground: #848484;
+  --foreground-dark: #61616150;
   --foreground-light: #eff;
+  --active: #80cbc4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +21,7 @@
     --background-light: #212121;
     --background-dark: #00000030;
     --foreground: #848484;
-    --foreground-dark: #61616150;
+    --foreground-dark: #61616160;
     --foreground-light: #eff;
     --active: #80cbc4;
   }
@@ -23,8 +29,8 @@
 
 html {
   /* TODO: for mob 14px */
-  font-size: 16px;
-  line-height: 1;
+  font-size: var(--size);
+  line-height: var(--line-height);
 }
 
 html,
@@ -35,7 +41,7 @@ body {
 body {
   min-height: 100vh;
   display: grid;
-  grid-template: "header header" auto "aside main" 1fr / auto 1fr;
+  grid-template: "header header" "progress progress" auto "aside main" 1fr / auto 1fr;
   color: var(--foreground);
   background: var(--background-light);
   font-family: var(--font-inconsolata), Arial, Helvetica, sans-serif;
@@ -68,9 +74,18 @@ svg {
   display: block;
 }
 
+h1,
+h2,
+h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  margin-bottom: var(--indent);
+}
+
 @media screen and (width <=1024px) {
   body {
-    grid-template: "header header" auto "aside main" 1fr / 3rem calc(100vw - 3rem);
+    grid-template: "header header" "progress progress" auto "aside main" 1fr / 3rem calc(100vw - 3rem);
   }
 }
 
