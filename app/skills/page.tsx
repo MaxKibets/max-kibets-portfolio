@@ -31,6 +31,12 @@ const STACK = {
   ],
 };
 
+const listItemRenderer = ([text, href]: string[]) => (
+  <a href={href} title={text} target="_blank">
+    {text}
+  </a>
+);
+
 const SkillsPage = () => {
   return (
     <article>
@@ -44,15 +50,15 @@ const SkillsPage = () => {
       </CommentedRows>
       <section>
         <Heading>GENERAL</Heading>
-        <List items={STACK.GENERAL} />
+        <List items={STACK.GENERAL} itemRenderer={listItemRenderer} />
       </section>
       <section>
         <Heading>ADDITIONAL</Heading>
-        <List items={STACK.ADDITIONAL} />
+        <List items={STACK.ADDITIONAL} itemRenderer={listItemRenderer} />
       </section>
       <section>
         <Heading>TOOLS</Heading>
-        <List items={STACK.TOOLS} />
+        <List items={STACK.TOOLS} itemRenderer={listItemRenderer} />
       </section>
     </article>
   );

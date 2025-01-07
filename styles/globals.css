@@ -66,6 +66,7 @@ a {
   text-underline-position: under;
   transition: color 0.2s;
   cursor: pointer;
+  color: var(--foreground-carroty);
 
   &:hover {
     color: var(--foreground-light);
