@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { ROUTES } from "@/constants/routes";
+import { ROUTE } from "@/constants/shared";
 import { Route } from "@/types/shared";
 import { usePageTransition } from "@/hooks/usePageTransition";
 
@@ -12,12 +12,12 @@ import { CloseClickCallback } from "./types";
 
 const Tabs = () => {
   const pathname = usePathname() as Route;
-  const [tabs, setTabs] = useState<Route[]>([ROUTES.MAIN]);
+  const [tabs, setTabs] = useState<Route[]>([ROUTE.MAIN]);
   const changeRoute = usePageTransition();
 
   useEffect(() => {
     const isTabOpened = tabs.includes(pathname);
-    const isValidPath = Object.values(ROUTES).includes(pathname);
+    const isValidPath = Object.values(ROUTE).includes(pathname);
 
     // Add tab if not opened yet
     if (!isTabOpened && isValidPath) {
@@ -28,7 +28,7 @@ const Tabs = () => {
   const handleCloseTab: CloseClickCallback = ({ href, event }) => {
     event.stopPropagation();
 
-    if (href === ROUTES.MAIN) {
+    if (href === ROUTE.MAIN) {
       return;
     }
 

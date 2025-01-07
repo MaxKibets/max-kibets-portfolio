@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-import { ROUTES } from "@/constants/routes";
+import { ROUTE } from "@/constants/shared";
 
 export default function NotFound() {
   return (
     <div>
       <h2>Not Found</h2>
       <p>Could not find requested resource</p>
-      <Link href={ROUTES.MAIN}>Return Home</Link>
+      <Link href={ROUTE.MAIN}>Return Home</Link>
     </div>
   );
 }

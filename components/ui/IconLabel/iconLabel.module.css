@@ -2,15 +2,8 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  font-size: 0.9rem;
-
-  &:not(.indented) {
-    padding: 0.15rem 0;
-  }
-
-  &.indented {
-    padding: 0.5rem 0.6rem;
-  }
+  color: var(--foreground);
+  text-decoration: none;
 
   &.clickable {
     cursor: pointer;
@@ -19,4 +12,12 @@
       color: var(--foreground-light);
     }
   }
+}
+
+.medium {
+  padding: 0.15rem 0;
+}
+
+.large {
+  padding: 0.5rem 0.6rem;
 }

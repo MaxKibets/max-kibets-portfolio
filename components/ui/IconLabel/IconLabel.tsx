@@ -3,13 +3,14 @@ import clsx from "clsx";
 
 import css from "./iconLabel.module.css";
 import { IconLabelProps } from "./types";
+import { SIZE } from "@/constants/shared";
 
 const IconLabel: FC<IconLabelProps> = ({
   onClick,
   prefixIcon,
   text,
   suffixIcon,
-  indented,
+  size = SIZE.SMALL,
   tag: Tag = "span",
   className,
 }) => (
@@ -17,7 +18,8 @@ const IconLabel: FC<IconLabelProps> = ({
     onClick={onClick}
     className={clsx(
       css.iconLabel,
-      { [css.indented]: indented, [css.clickable]: Boolean(onClick) },
+      css[size],
+      { [css.clickable]: Boolean(onClick) },
       className,
     )}
   >

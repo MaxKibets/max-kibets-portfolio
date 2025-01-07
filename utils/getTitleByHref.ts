@@ -1,11 +1,11 @@
 import { Route } from "next";
 
-import { ROUTES } from "@/constants/routes";
-import { PAGE_TITLE } from "@/constants/text";
+import { ROUTE } from "@/constants/shared";
+import { PAGE_TITLE } from "@/constants/shared";
 
 export const getTitleByHref = (href: Route) => {
-  const routeKey = Object.keys(ROUTES).find(
-    (key) => ROUTES[key as keyof typeof ROUTES] === href,
+  const routeKey = Object.keys(ROUTE).find(
+    (key) => ROUTE[key as keyof typeof ROUTE] === href,
   );
 
   return routeKey

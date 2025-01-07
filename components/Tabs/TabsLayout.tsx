@@ -2,7 +2,7 @@ import { FC } from "react";
 import clsx from "clsx";
 import { VscClose, VscFileCode, VscPinned } from "react-icons/vsc";
 
-import { ROUTES } from "@/constants/routes";
+import { ROUTE, SIZE } from "@/constants/shared";
 import { Button, NavLink } from "@/components/ui";
 import { getTitleByHref } from "@/utils";
 
@@ -18,7 +18,7 @@ const TabsLayout: FC<TabsLayoutProps> = ({ tabs, onCloseClick }) => (
   <div className={css.wrap}>
     <div className={css.tabs}>
       {tabs.map((href) => {
-        const isMain = href === ROUTES.MAIN;
+        const isMain = href === ROUTE.MAIN;
 
         return (
           <NavLink
@@ -37,7 +37,7 @@ const TabsLayout: FC<TabsLayoutProps> = ({ tabs, onCloseClick }) => (
             }
             className={clsx({ [css.pinned]: isMain })}
             underlined
-            indented
+            size={SIZE.LARGE}
           />
         );
       })}
