@@ -13,15 +13,16 @@ import css from "./navlink.module.css";
 const NavLink: FC<NavLinkProps> = ({
   href,
   underlined,
+  outlined,
   className,
   text,
   prefixIcon,
   suffixIcon,
-  indented,
+  size,
 }) => {
   const pathname = usePathname();
   const toNextPage = usePageTransition();
-  
+
   return (
     <IconLabel
       // Do not use next/link here, because we want to use the custom transition
@@ -29,8 +30,9 @@ const NavLink: FC<NavLinkProps> = ({
       className={clsx(className, {
         [css.active]: href === pathname,
         [css.underlined]: underlined,
+        [css.outlined]: outlined,
       })}
-      indented={indented}
+      size={size}
       text={text}
       prefixIcon={prefixIcon}
       suffixIcon={suffixIcon}
