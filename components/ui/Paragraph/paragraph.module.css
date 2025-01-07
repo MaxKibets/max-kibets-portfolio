@@ -1,0 +1,13 @@
+.paragraph {
+  margin-left: 1rem;
+  color: var(--foreground-carroty);
+
+  &:not(:last-child) {
+    margin-bottom: var(--indent);
+  }
+
+  &::after {
+    content: ';';
+    color: var(--foreground-light);
+  }
+}
