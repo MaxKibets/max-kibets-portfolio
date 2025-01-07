@@ -1,0 +1,6 @@
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--indent);
+  gap: var(--indent);
+}
