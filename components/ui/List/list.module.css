@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 var(--indent) 1rem;
+
+  &::after {
+    content: ';';
+  }
+}
+
+.prefix,
+.suffix {
+  color: #c586a1;
+}
+
+.link {
+  color: var(--foreground-carroty);
+}
