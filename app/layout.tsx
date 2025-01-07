@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import Tabs from "@/components/Tabs";
 import ProgressBar from "@/components/ProgressBar";
-import { IndexedRows } from "@/components/ui";
+import RowIndexer from "@/components/RowIndexer";
 
 import "../styles/globals.css";
 
@@ -34,7 +34,7 @@ export default async function RootLayout({
           <Sidebar />
           <main>
             <Tabs />
-            <IndexedRows>{children}</IndexedRows>
+            <RowIndexer>{children}</RowIndexer>
           </main>
         </ProgressBar>
       </body>
