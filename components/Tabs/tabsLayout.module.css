@@ -1,6 +1,7 @@
 .wrap {
   width: 100%;
   overflow-x: auto;
+  font-size: .9rem;
 }
 
 .tabs {
