@@ -1,0 +1,35 @@
+.heading {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--accent);
+
+  &::before {
+    color: #569cd6;
+  }
+
+  &::after {
+    color: var(--foreground-light);
+  }
+}
+
+.prefixConst {
+  &::before {
+    content: 'const ';
+  }
+}
+
+.suffixEqual {
+  &::after {
+    content: ' = ';
+    color: var(--foreground-light);
+  }
+}
+
+.suffixColon {
+  display: inline-block;
+
+  &::after {
+    content: ': ';
+    color: var(--foreground-light);
+  }
+}
