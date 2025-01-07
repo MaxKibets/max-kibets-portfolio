@@ -29,11 +29,6 @@ const STACK = {
     ["NPM", "https://www.npmjs.com/"],
     ["Yarn", "https://yarnpkg.com/"],
   ],
-  IDE: [
-    ["VSCode", "https://code.visualstudio.com/"],
-    ["PHPStorm", "https://www.jetbrains.com/phpstorm/"],
-    ["Copilot", "https://copilot.github.com/"],
-  ],
 };
 
 const SkillsPage = () => {
@@ -58,10 +53,6 @@ const SkillsPage = () => {
       <section>
         <Heading>TOOLS</Heading>
         <List items={STACK.TOOLS} />
-      </section>
-      <section>
-        <Heading>IDE</Heading>
-        <List items={STACK.IDE} />
       </section>
     </article>
   );
