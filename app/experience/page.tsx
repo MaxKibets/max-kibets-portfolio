@@ -21,7 +21,7 @@ const EXP = [
     DESCRIPTION: [
       "Creating new and rewriting existing markup of web applications",
       "Create an animations using JavaScript and CSS3",
-      "Worked well with the design team",
+      "Worked cooperatively with the design team",
       "Adhered to application development policies and quality standards",
     ],
   },
@@ -32,7 +32,7 @@ const EXP = [
     DESCRIPTION: [
       "Creating new and rewriting existing markup of web applications",
       "Create an animations using CSS3",
-      "Worked well with the design team",
+      "Worked cooperatively with the design team",
       "Adhered to application development policies and quality standards",
     ],
   },
@@ -51,6 +51,7 @@ const ExperiencePage = () => {
       </CommentedRows>
       {EXP.map((item) => (
         <section key={item.COMPANY}>
+          {"{"}
           {Object.keys(item).map((key) => {
             const content = item[key as keyof typeof item];
 
@@ -67,6 +68,7 @@ const ExperiencePage = () => {
               </div>
             );
           })}
+          {"}"}
         </section>
       ))}
     </article>
