@@ -14,12 +14,12 @@
   }
 
   &::before {
-    content: "/**";
+    content: "\002F\002A\002A";
     top: 0;
   }
 
   &::after {
-    content: "\00a0*/";
+    content: "\00a0\002A\002F";
     bottom: 0;
   }
 }
