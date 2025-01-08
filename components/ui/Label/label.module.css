@@ -1,0 +1,9 @@
+.label {
+  display: block;
+  color: var(--foreground-green);
+  text-transform: lowercase;
+
+  &::before {
+    content: '//\00a0';
+  }
+}
