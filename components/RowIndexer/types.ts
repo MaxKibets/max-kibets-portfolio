@@ -1,6 +1,6 @@
 import { Ref } from "react";
 
-import { WithChildren } from "@/types/shared";
+import { WithChildren } from "@/types";
 
 export type RowIndexerLayoutProps = WithChildren<{
   linesCount: number;

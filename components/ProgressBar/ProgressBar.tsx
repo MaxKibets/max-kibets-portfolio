@@ -2,7 +2,7 @@
 
 import { createContext, FC } from "react";
 
-import { WithChildren } from "@/types/shared";
+import { WithChildren } from "@/types";
 import { Progress } from "@/components/ui";
 
 import { useProgress } from "./hooks";

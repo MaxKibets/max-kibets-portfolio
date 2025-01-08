@@ -1,4 +1,4 @@
-import { Size } from "@/types/shared";
+import { Size } from "@/types";
 import { JSX } from "react";
 
 export type IconLabelProps = {

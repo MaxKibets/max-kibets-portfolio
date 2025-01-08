@@ -1,4 +1,4 @@
-import { Route, Size } from "@/types/shared";
+import { Route, Size } from "@/types";
 
 export type NavLinkProps = {
   href: Route;

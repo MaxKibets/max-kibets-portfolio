@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ROUTE } from "@/constants/shared";
+import { ROUTE } from "@/constants";
 
 export default function NotFound() {
   return (

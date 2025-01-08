@@ -1,6 +1,6 @@
 import { FC, Children } from "react";
 
-import { WithChildren } from "@/types/shared";
+import { WithChildren } from "@/types";
 
 import css from "./group.module.css";
 

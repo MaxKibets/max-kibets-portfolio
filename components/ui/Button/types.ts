@@ -1,6 +1,6 @@
 import { MouseEventHandler } from "react";
 
-import { WithChildren } from "@/types/shared";
+import { WithChildren } from "@/types";
 
 export type ButtonProps = WithChildren<{
   title: string;

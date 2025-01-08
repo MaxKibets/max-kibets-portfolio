@@ -1,4 +1,4 @@
-import { ROUTE, SIZE } from "@/constants/shared";
+import { ROUTE, SIZE } from "@/constants";
 
 export type WithChildren<T = object> = T & { children?: React.ReactNode };
 

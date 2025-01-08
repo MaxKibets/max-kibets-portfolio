@@ -2,7 +2,7 @@
 
 import { FC, useLayoutEffect, useRef, useState } from "react";
 
-import { WithChildren } from "@/types/shared";
+import { WithChildren } from "@/types";
 
 import RowIndexerLayout from "./RowIndexerLayout";
 

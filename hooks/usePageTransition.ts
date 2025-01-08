@@ -3,7 +3,7 @@ import { usePathname, useRouter } from "next/navigation";
 
 import { PROGRESS_STATE } from "@/components/ProgressBar/constants";
 import { useProgressBarContext } from "@/components/ProgressBar/hooks";
-import { Route } from "@/types/shared";
+import { Route } from "@/types";
 
 export const usePageTransition = () => {
   const pathname = usePathname();

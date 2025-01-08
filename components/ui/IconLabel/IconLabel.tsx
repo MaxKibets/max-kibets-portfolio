@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 import css from "./iconLabel.module.css";
 import { IconLabelProps } from "./types";
-import { SIZE } from "@/constants/shared";
+import { SIZE } from "@/constants";
 
 const IconLabel: FC<IconLabelProps> = ({
   onClick,

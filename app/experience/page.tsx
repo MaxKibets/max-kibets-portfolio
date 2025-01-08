@@ -1,5 +1,5 @@
 import { CommentedRows, Heading, List, Paragraph } from "@/components/ui";
-import { HEADING_PREFIX, HEADING_SUFFIX } from "@/constants/shared";
+import { HEADING_PREFIX, HEADING_SUFFIX } from "@/constants";
 
 const EXP = [
   {

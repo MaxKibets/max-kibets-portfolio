@@ -1,5 +1,5 @@
-import { HEADING_LEVEL, HEADING_PREFIX, HEADING_SUFFIX } from "@/constants/shared";
-import { WithChildren } from "@/types/shared";
+import { HEADING_LEVEL, HEADING_PREFIX, HEADING_SUFFIX } from "@/constants";
+import { WithChildren } from "@/types";
 
 export type HeadingProps = WithChildren<{
   prefix?: (typeof HEADING_PREFIX)[keyof typeof HEADING_PREFIX];

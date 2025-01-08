@@ -1,7 +1,7 @@
 import { Route } from "next";
 
-import { ROUTE } from "@/constants/shared";
-import { PAGE_TITLE } from "@/constants/shared";
+import { ROUTE } from "@/constants";
+import { PAGE_TITLE } from "@/constants";
 
 export const getTitleByHref = (href: Route) => {
   const routeKey = Object.keys(ROUTE).find(

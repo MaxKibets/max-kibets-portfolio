@@ -1,7 +1,7 @@
 import { FC, JSX } from "react";
 import clsx from "clsx";
 
-import { HEADING_LEVEL, HEADING_PREFIX, HEADING_SUFFIX } from "@/constants/shared";
+import { HEADING_LEVEL, HEADING_PREFIX, HEADING_SUFFIX } from "@/constants";
 
 import css from "./heading.module.css";
 import { HeadingProps } from "./types";

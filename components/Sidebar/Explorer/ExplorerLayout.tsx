@@ -9,7 +9,7 @@ import {
 import clsx from "clsx";
 
 import { Button, IconLabel, NavLink } from "@/components/ui";
-import { ROUTE, SIZE } from "@/constants/shared";
+import { ROUTE, SIZE } from "@/constants";
 import { getTitleByHref } from "@/utils";
 
 import { ExplorerLayoutProps } from "./types";

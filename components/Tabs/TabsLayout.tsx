@@ -2,7 +2,7 @@ import { FC } from "react";
 import clsx from "clsx";
 import { VscClose, VscFileCode, VscPinned } from "react-icons/vsc";
 
-import { ROUTE, SIZE } from "@/constants/shared";
+import { ROUTE, SIZE } from "@/constants";
 import { Button, NavLink } from "@/components/ui";
 import { getTitleByHref } from "@/utils";
 

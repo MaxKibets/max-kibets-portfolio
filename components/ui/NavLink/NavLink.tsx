@@ -4,7 +4,7 @@ import { FC } from "react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
-import { usePageTransition } from "@/hooks/usePageTransition";
+import { usePageTransition } from "@/hooks";
 
 import IconLabel from "../IconLabel";
 import { NavLinkProps } from "./types";

@@ -1,5 +1,5 @@
 import { CommentedRows, Heading, NavLink, Paragraph, Group } from "@/components/ui";
-import { ROUTE } from "@/constants/shared";
+import { ROUTE } from "@/constants";
 
 export default function Home() {
   return (

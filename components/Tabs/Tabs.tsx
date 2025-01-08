@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { ROUTE } from "@/constants/shared";
-import { Route } from "@/types/shared";
-import { usePageTransition } from "@/hooks/usePageTransition";
+import { ROUTE } from "@/constants";
+import { Route } from "@/types";
+import { usePageTransition } from "@/hooks";
 
 import TabsLayout from "./TabsLayout";
 import { CloseClickCallback } from "./types";

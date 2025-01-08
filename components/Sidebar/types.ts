@@ -1,4 +1,4 @@
-import { WithChildren } from "@/types/shared";
+import { WithChildren } from "@/types";
 
 export type SidebarLayoutProps = WithChildren<{
   onFileClick: () => void;

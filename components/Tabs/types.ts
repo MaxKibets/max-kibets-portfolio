@@ -1,4 +1,4 @@
-import { Route } from "@/types/shared";
+import { Route } from "@/types";
 
 export type CloseClickCallback = ({
   href,
