@@ -7,6 +7,9 @@ import Paragraph from "./Paragraph";
 import Heading from "./Heading";
 import Group from "./Group";
 import List from "./List";
+import Label from "./Label";
+import Input from "./Input";
+import Textarea from "./Textarea";
 
 export {
   Button,
@@ -18,4 +21,7 @@ export {
   Heading,
   Group,
   List,
+  Label,
+  Input,
+  Textarea,
 };
