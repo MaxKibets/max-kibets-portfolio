@@ -1,4 +1,4 @@
-import { FC, Children } from "react";
+import { FC } from "react";
 
 import { WithChildren } from "@/types";
 

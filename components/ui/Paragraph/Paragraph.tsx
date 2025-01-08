@@ -4,8 +4,8 @@ import { WithChildren } from "@/types";
 
 import css from "./paragraph.module.css";
 
-const Paragraph: FC<WithChildren<{}>> = ({ children }) => (
-  <p className={css.paragraph}>"{children}"</p>
+const Paragraph: FC<WithChildren> = ({ children }) => (
+  <p className={css.paragraph}>&quot;{children}&quot;</p>
 );
 
 export default Paragraph;

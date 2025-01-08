@@ -5,7 +5,7 @@ import css from "./list.module.css";
 
 const List: FC<{
   items: string[][] | string[];
-  itemRenderer?: (props: any) => JSX.Element;
+  itemRenderer?: (props: string | string[]) => JSX.Element;
 }> = ({ items, itemRenderer }) => (
   <ul className={css.list}>
     <span className={css.prefix}>[&nbsp;</span>
@@ -16,7 +16,7 @@ const List: FC<{
           key={index}
           className={clsx(css.item, index !== items.length - 1 && css.itemWithComma)}
         >
-          "{itemRenderer ? itemRenderer(item) : item}"
+          &quot;{itemRenderer ? itemRenderer(item) : item}&quot;
         </li>
       );
     })}

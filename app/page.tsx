@@ -18,7 +18,7 @@ export default function Home() {
       <section>
         <Heading>INTODUCTION</Heading>
         <Paragraph>
-          For over 7 years, I've been diving deep into the world of modern web
+          For over 7 years, I&apos;ve been diving deep into the world of modern web
           technologies, turning creative ideas into reality
         </Paragraph>
       </section>

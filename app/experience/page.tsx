@@ -46,7 +46,7 @@ const ExperiencePage = () => {
         <p>
           It all started with a fascination for how websites work. Since then, I’ve taken
           on challenges, learned new skills, and built projects that I’m truly proud of.
-          Here's a glimpse into where my journey has taken me so far
+          Here&apos;s a glimpse into where my journey has taken me so far
         </p>
       </CommentedRows>
       {EXP.map((item) => (
