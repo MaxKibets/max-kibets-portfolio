@@ -3,7 +3,7 @@
   color: var(--foreground-carroty);
 
   &:not(:last-child) {
-    margin-bottom: var(--indent);
+    margin-bottom: var(--row-height);
   }
 
   &::after {

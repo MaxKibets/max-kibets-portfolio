@@ -1,7 +1,7 @@
 :root {
   --size: 16px;
   --line-height: 1.375;
-  --indent: calc(var(--size) * var(--line-height));
+  --row-height: calc(var(--size) * var(--line-height));
   --border: #00000060;
   --border-light: #4a4a4a;
   --background: #1a1a1a;
@@ -11,11 +11,12 @@
   --foreground-dark: #61616150;
   --foreground-light: #eff;
   --foreground-carroty: #ce9178;
+  --foreground-green: #c3e88d90;
   --active: #80cbc4;
   --accent: #9cdcfe;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --border: #00000060;
     --border-light: #4a4a4a;
@@ -27,7 +28,7 @@
     --foreground-light: #eff;
     --active: #80cbc4;
   }
-}
+} */
 
 html {
   /* TODO: for mob 14px */
@@ -88,7 +89,7 @@ h2 {
 }
 
 section:not(:last-child) {
-  margin-bottom: var(--indent);
+  margin-bottom: var(--row-height);
 }
 
 @media screen and (width <=1024px) {
