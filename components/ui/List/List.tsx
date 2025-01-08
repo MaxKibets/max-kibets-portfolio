@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { FC, JSX } from "react";
 
 import css from "./list.module.css";
@@ -8,11 +9,14 @@ const List: FC<{
 }> = ({ items, itemRenderer }) => (
   <ul className={css.list}>
     <span className={css.prefix}>[&nbsp;</span>
+
     {items.map((item, index) => {
       return (
-        <li key={index} className={css.item}>
+        <li
+          key={index}
+          className={clsx(css.item, index !== items.length - 1 && css.itemWithComma)}
+        >
           "{itemRenderer ? itemRenderer(item) : item}"
-          {index !== items.length - 1 && ",\u00A0"}
         </li>
       );
     })}

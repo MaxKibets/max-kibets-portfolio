@@ -17,3 +17,8 @@
 .item {
   color: var(--foreground-carroty);
 }
+
+.itemWithComma::after {
+  content: ",\00a0";
+  color: var(--foreground-light);
+}
