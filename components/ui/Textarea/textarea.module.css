@@ -1,9 +1,9 @@
 .textarea {
   width: 100%;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   border: 1px solid var(--border-light);
-  border-radius: .15rem;
-  font-size: .9rem;
+  border-radius: 0.15rem;
+  font-size: 0.9rem;
   line-height: inherit;
   font-family: inherit;
   background-color: var(--background-light);

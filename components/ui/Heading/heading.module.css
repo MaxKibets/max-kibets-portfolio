@@ -14,13 +14,13 @@
 
 .prefixConst {
   &::before {
-    content: 'const ';
+    content: "const ";
   }
 }
 
 .suffixEqual {
   &::after {
-    content: ' = ';
+    content: " = ";
     color: var(--foreground-light);
   }
 }
@@ -29,7 +29,7 @@
   display: inline-block;
 
   &::after {
-    content: ': ';
+    content: ": ";
     color: var(--foreground-light);
   }
 }

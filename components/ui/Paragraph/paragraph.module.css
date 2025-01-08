@@ -7,7 +7,7 @@
   }
 
   &::after {
-    content: ';';
+    content: ";";
     color: var(--foreground-light);
   }
 }

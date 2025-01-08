@@ -2,7 +2,7 @@
   grid-area: aside;
   display: flex;
   position: relative;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .sidebar,
