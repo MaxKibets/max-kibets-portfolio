@@ -2,16 +2,6 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  color: var(--foreground);
-  text-decoration: none;
-
-  &.clickable {
-    cursor: pointer;
-
-    &:hover {
-      color: var(--foreground-light);
-    }
-  }
 }
 
 .medium {

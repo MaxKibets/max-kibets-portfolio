@@ -27,3 +27,13 @@
 .list {
   list-style: none;
 }
+
+.folder {
+  color: var(--foreground);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--foreground-light);
+  }
+}

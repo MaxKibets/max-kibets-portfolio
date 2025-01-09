@@ -1,12 +1,8 @@
-import { Route, Size } from "@/types";
+import { Route, WithChildren } from "@/types";
 
-export type NavLinkProps = {
+export type NavLinkProps = WithChildren<{
   href: Route;
   underlined?: boolean;
   outlined?: boolean;
   className?: string;
-  text: string;
-  prefixIcon?: React.ReactNode;
-  suffixIcon?: React.ReactNode;
-  size?: Size;
-};
+}>;

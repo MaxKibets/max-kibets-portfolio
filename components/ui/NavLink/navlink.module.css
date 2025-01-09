@@ -1,5 +1,19 @@
+.link {
+  text-decoration: none;
+  color: var(--foreground);
+
+  &:hover {
+    color: var(--foreground-light);
+  }
+}
+
 .active {
   color: var(--active);
+  cursor: default;
+
+  &:hover {
+    color: var(--active);
+  }
 
   &:not(.underlined) {
     background-color: var(--background-dark);

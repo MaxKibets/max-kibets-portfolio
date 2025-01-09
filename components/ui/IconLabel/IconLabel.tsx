@@ -1,32 +1,24 @@
 import { FC } from "react";
 import clsx from "clsx";
 
-import css from "./iconLabel.module.css";
-import { IconLabelProps } from "./types";
 import { SIZE } from "@/constants";
 
+import { IconLabelProps } from "./types";
+import css from "./iconLabel.module.css";
+
 const IconLabel: FC<IconLabelProps> = ({
-  onClick,
   prefixIcon,
   text,
   suffixIcon,
   size = SIZE.SMALL,
-  tag: Tag = "span",
   className,
+  onClick,
 }) => (
-  <Tag
-    onClick={onClick}
-    className={clsx(
-      css.iconLabel,
-      css[size],
-      { [css.clickable]: Boolean(onClick) },
-      className,
-    )}
-  >
+  <span className={clsx(css.iconLabel, css[size], className)} onClick={onClick}>
     {prefixIcon}
     {text}
     {suffixIcon}
-  </Tag>
+  </span>
 );
 
 export default IconLabel;

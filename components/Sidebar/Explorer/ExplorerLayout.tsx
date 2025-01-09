@@ -31,6 +31,7 @@ const ExplorerLayout: FC<ExplorerLayoutProps> = ({ onClick, expanded }) => (
       </Button>
     </div>
     <IconLabel
+      className={css.folder}
       onClick={onClick}
       prefixIcon={expanded ? <VscFolderOpened /> : <VscFolder />}
       text={TEXT.PAGES}
@@ -39,12 +40,13 @@ const ExplorerLayout: FC<ExplorerLayoutProps> = ({ onClick, expanded }) => (
       <ul className={css.list}>
         {Object.values(ROUTE).map((href) => (
           <li key={href}>
-            <NavLink
-              href={href}
-              prefixIcon={<VscFileCode />}
-              text={getTitleByHref(href)}
-              size={SIZE.MEDIUM}
-            />
+            <NavLink href={href}>
+              <IconLabel
+                size={SIZE.MEDIUM}
+                text={getTitleByHref(href)}
+                prefixIcon={<VscFileCode />}
+              />
+            </NavLink>
           </li>
         ))}
       </ul>

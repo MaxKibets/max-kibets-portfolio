@@ -36,9 +36,15 @@ export default function Home() {
           Click to get more information about me or to get in touch
         </CommentedRows>
         <Group>
-          <NavLink href={ROUTE.SKILLS} text="MY SKILLS" outlined />
-          <NavLink href={ROUTE.EXPERIENCE} text="MY EXPERIENCE" outlined />
-          <NavLink href={ROUTE.CONTACT} text="GET IN TOUCH" outlined />
+          <NavLink href={ROUTE.SKILLS} outlined>
+            MY SKILLS
+          </NavLink>
+          <NavLink href={ROUTE.EXPERIENCE} outlined>
+            MY EXPERIENCE
+          </NavLink>
+          <NavLink href={ROUTE.CONTACT} outlined>
+            GET IN TOUCH
+          </NavLink>
         </Group>
       </section>
     </article>

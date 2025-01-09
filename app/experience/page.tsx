@@ -38,41 +38,39 @@ const EXP = [
   },
 ];
 
-const ExperiencePage = () => {
-  return (
-    <article>
-      <CommentedRows>
-        <h2>MY EXPERIENCE</h2>
-        <p>
-          It all started with a fascination for how websites work. Since then, I’ve taken
-          on challenges, learned new skills, and built projects that I’m truly proud of.
-          Here&apos;s a glimpse into where my journey has taken me so far
-        </p>
-      </CommentedRows>
-      {EXP.map((item) => (
-        <section key={item.COMPANY}>
-          {"{"}
-          {Object.keys(item).map((key) => {
-            const content = item[key as keyof typeof item];
+const ExperiencePage = () => (
+  <article>
+    <CommentedRows>
+      <h2>MY EXPERIENCE</h2>
+      <p>
+        It all started with a fascination for how websites work. Since then, I’ve taken on
+        challenges, learned new skills, and built projects that I’m truly proud of.
+        Here&apos;s a glimpse into where my journey has taken me so far
+      </p>
+    </CommentedRows>
+    {EXP.map((item) => (
+      <section key={item.COMPANY}>
+        {"{"}
+        {Object.keys(item).map((key) => {
+          const content = item[key as keyof typeof item];
 
-            return (
-              <div key={key}>
-                <Heading prefix={HEADING_PREFIX.NONE} suffix={HEADING_SUFFIX.COLON}>
-                  {key}
-                </Heading>
-                {typeof content === "string" ? (
-                  <Paragraph>{content}</Paragraph>
-                ) : (
-                  <List items={content} />
-                )}
-              </div>
-            );
-          })}
-          {"}"}
-        </section>
-      ))}
-    </article>
-  );
-};
+          return (
+            <div key={key}>
+              <Heading prefix={HEADING_PREFIX.NONE} suffix={HEADING_SUFFIX.COLON}>
+                {key}
+              </Heading>
+              {typeof content === "string" ? (
+                <Paragraph>{content}</Paragraph>
+              ) : (
+                <List items={content} />
+              )}
+            </div>
+          );
+        })}
+        {"}"}
+      </section>
+    ))}
+  </article>
+);
 
 export default ExperiencePage;

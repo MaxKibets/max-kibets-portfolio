@@ -6,7 +6,7 @@ export type IconLabelProps = {
   suffixIcon?: React.ReactNode;
   text: string;
   size?: Size;
-  onClick?: () => void;
   tag?: keyof JSX.IntrinsicElements;
   className?: string;
+  onClick?: () => void;
 };
