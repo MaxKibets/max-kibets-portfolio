@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+}
+
+.button {
+  margin-top: var(--row-height);
+  margin-left: auto;
+}
+
+@media screen and (width >=768px) {
+  .row {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    margin-bottom: var(--row-height);
+  }
+
+  .label {
+    width: 5rem;
+  }
+
+  .input {
+    flex: 1;
+  }
+
+  .button {
+    margin: 0 5.5rem 0 auto;
+  }
+}

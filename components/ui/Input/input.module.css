@@ -1,6 +1,5 @@
 .input {
   display: block;
-  width: 100%;
   height: var(--row-height);
   padding: 0 0.5rem;
   border-radius: 0.15rem;
