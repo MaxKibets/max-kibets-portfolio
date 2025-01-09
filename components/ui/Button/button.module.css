@@ -3,10 +3,14 @@
   outline: none;
   border: none;
   cursor: pointer;
+  line-height: inherit;
   font-size: inherit;
+  font-family: inherit;
   transition: all 0.2s;
   color: var(--foreground);
+}
 
+.shaded {
   &:active:not(:disabled) {
     color: var(--foreground-light);
   }
@@ -16,5 +20,17 @@
     box-shadow: 0 0 0 0.15rem var(--foreground-dark);
     background-color: var(--foreground-dark);
     color: var(--foreground-light);
+  }
+}
+
+.outlined {
+  padding: 0 1rem;
+  box-shadow: inset 0 0 0 1px var(--foreground-yellow);
+  color: var(--foreground-yellow);
+
+  &:hover,
+  &:focus {
+    color: var(--foreground-light);
+    box-shadow: inset 0 0 0 1px var(--foreground-light);
   }
 }

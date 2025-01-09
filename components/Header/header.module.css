@@ -9,7 +9,7 @@
 
 .logo {
   font-size: 1.4rem;
-  color: var(--active);
+  color: var(--foreground-turquoise);
 }
 
 .heading {

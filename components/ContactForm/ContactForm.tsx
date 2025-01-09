@@ -1,4 +1,4 @@
-import { Input, Label, Textarea } from "@/components/ui";
+import { Button, Input, Label, Textarea } from "@/components/ui";
 
 const ContactForm = () => (
   <form>
@@ -14,7 +14,9 @@ const ContactForm = () => (
       <Label htmlFor="message">Message</Label>
       <Textarea rows={4} id="message" />
     </div>
-    <button type="submit">Send</button>
+    <Button title="Click to send your message" outlined>
+      SEND
+    </Button>
   </form>
 );
 

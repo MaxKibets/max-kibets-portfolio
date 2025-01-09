@@ -6,4 +6,5 @@ export type ButtonProps = WithChildren<{
   title: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
+  outlined?: boolean;
 }>;

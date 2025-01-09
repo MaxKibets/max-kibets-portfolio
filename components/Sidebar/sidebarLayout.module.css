@@ -23,7 +23,7 @@
   transition: all 0.2s;
 
   &.active {
-    box-shadow: inset 1.5px 0 0 var(--active);
+    box-shadow: inset 1.5px 0 0 var(--foreground-turquoise);
   }
 }
 

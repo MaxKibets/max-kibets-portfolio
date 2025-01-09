@@ -12,8 +12,9 @@
   --foreground-light: #eff;
   --foreground-carroty: #ce9178;
   --foreground-green: #c3e88d90;
-  --active: #80cbc4;
-  --accent: #9cdcfe;
+  --foreground-yellow: #dcdcaa;
+  --foreground-turquoise: #80cbc4;
+  --foreground-blue: #9cdcfe;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -26,7 +27,7 @@
     --foreground: #848484;
     --foreground-dark: #61616160;
     --foreground-light: #eff;
-    --active: #80cbc4;
+    --foreground-turquoise: #80cbc4;
   }
 } */
 
