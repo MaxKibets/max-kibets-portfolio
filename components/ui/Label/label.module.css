@@ -1,6 +1,6 @@
 .label {
   display: block;
-  color: var(--foreground-green);
+  color: var(--foreground);
   text-transform: lowercase;
 
   &::before {

@@ -4,11 +4,11 @@
   border-radius: 0.15rem;
   font-size: 0.9rem;
   font-family: inherit;
-  background-color: var(--background-light);
+  background-color: rgb(255 255 255 / 3%);
   outline: none;
 
   /* If use border instead of box-shadow calculation with [- 2px] it doesn't work well */
   border: none;
-  box-shadow: inset 0 0 0 1px var(--border-light);
+  box-shadow: 0 0 0 1px var(--border-light);
   line-height: calc(var(--size) * var(--line-height));
 }

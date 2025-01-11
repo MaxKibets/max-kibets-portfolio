@@ -1,11 +1,5 @@
-import { MouseEventHandler } from "react";
+import { ButtonHTMLAttributes } from "react";
 
-import { WithChildren } from "@/types";
-
-export type ButtonProps = WithChildren<{
-  title: string;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  disabled?: boolean;
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   outlined?: boolean;
-  className?: string;
-}>;
+};

@@ -5,16 +5,17 @@ import css from "./button.module.css";
 import { ButtonProps } from "./types";
 
 const Button: FC<ButtonProps> = ({
+  outlined,
+  type = "button",
   children,
   title,
-  disabled,
-  outlined,
-  onClick,
   className,
+  onClick,
+  disabled,
 }) => (
   <button
-    type="button"
     title={title}
+    type={type}
     className={clsx(css.button, className, outlined ? css.outlined : css.shaded)}
     disabled={disabled}
     onClick={onClick}

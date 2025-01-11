@@ -10,6 +10,7 @@ import List from "./List";
 import Label from "./Label";
 import Input from "./Input";
 import Textarea from "./Textarea";
+import Error from "./Error";
 
 export {
   Button,
@@ -24,4 +25,5 @@ export {
   Label,
   Input,
   Textarea,
+  Error,
 };
