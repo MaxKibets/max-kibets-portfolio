@@ -1,37 +1,33 @@
-import { Button, Input, Label, Textarea } from "@/components/ui";
+"use client";
 
-import css from "./contactFormLayout.module.css";
+import { useForm } from "./hooks";
+import { FormState } from "./types";
+import ContactFormLayout from "./ContactFromLayout";
+import { FORMSPARK_ACTION_URL, INITIAL_STATE, VALIDATION_SCHEMA } from "./constants";
 
-const FIELDS = ["name", "email", "message"] as const;
+const handleSubmit = async (data: FormState, success: boolean) => {
+  console.log("formData", JSON.stringify(data), success);
 
-const ContactForm = () => (
-  <form className={css.form}>
-    {FIELDS.map((field) => (
-      <div key={field} className={css.row}>
-        <Label htmlFor={field} className={css.label}>
-          {field}
-        </Label>
-        {field === "message" ? (
-          <Textarea
-            rows={4}
-            id="message"
-            className={css.input}
-            placeholder={`enter your ${field}`}
-          />
-        ) : (
-          <Input
-            type="text"
-            id={field}
-            className={css.input}
-            placeholder={`enter your ${field}`}
-          />
-        )}
-      </div>
-    ))}
-    <Button title="Click to send your message" outlined className={css.button}>
-      SEND
-    </Button>
-  </form>
-);
+  await fetch(FORMSPARK_ACTION_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+};
+
+const ContactForm = () => {
+  const { register, formAction, errors } = useForm<FormState>({
+    handleSubmit,
+    initialState: INITIAL_STATE,
+    validationSchema: VALIDATION_SCHEMA,
+  });
+
+  return (
+    <ContactFormLayout register={register} formAction={formAction} errors={errors} />
+  );
+};
 
 export default ContactForm;

@@ -19,4 +19,5 @@
 
 .content {
   padding-right: 1rem;
+  flex: 1;
 }
