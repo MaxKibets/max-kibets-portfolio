@@ -6,7 +6,9 @@ import ContactFormLayout from "./ContactFromLayout";
 import { FORMSPARK_ACTION_URL, INITIAL_STATE, VALIDATION_SCHEMA } from "./constants";
 
 const handleSubmit = async (data: FormState, success: boolean) => {
-  console.log("formData", JSON.stringify(data), success);
+  if (!success) {
+    return;
+  }
 
   await fetch(FORMSPARK_ACTION_URL, {
     method: "POST",
