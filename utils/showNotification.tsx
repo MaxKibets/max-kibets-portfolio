@@ -12,7 +12,7 @@ export const showNotification = (message: string, type: Variant = NOTIF_TYPE.DAN
     />,
     {
       variant: type,
-      timeout: 30000000,
+      timeout: 3000,
       position: "top-center",
     },
   );
