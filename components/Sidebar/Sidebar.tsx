@@ -13,6 +13,25 @@ const Sidebar = () => {
     setExpanded(!isMob);
   }, [isMob]);
 
+  useEffect(() => {
+    const handlePageClick = (event: MouseEvent) => {
+      const isInAside = (event.target as HTMLElement).closest("aside");
+      const isLinkInAside = isInAside && (event.target as HTMLElement).closest("a");
+
+      if ((!isInAside || isLinkInAside) && expanded) {
+        setExpanded(false);
+      }
+    };
+
+    if (isMob) {
+      document.addEventListener("click", handlePageClick);
+    }
+
+    return () => {
+      document.removeEventListener("click", handlePageClick);
+    };
+  }, [isMob, expanded]);
+
   return (
     <SidebarLayout expanded={expanded} onFileClick={() => setExpanded((prev) => !prev)} />
   );

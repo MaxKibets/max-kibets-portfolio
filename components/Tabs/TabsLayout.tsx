@@ -35,7 +35,11 @@ const TabsLayout: FC<TabsLayoutProps> = ({ tabs, onCloseClick }) => (
                 <Button
                   title={isMain ? TEXT.PINNED : TEXT.CLOSE}
                   disabled={isMain}
-                  onClick={(event) => onCloseClick({ href, event })}
+                  onClick={(event) => {
+                    event.preventDefault();
+
+                    onCloseClick({ href, event });
+                  }}
                 >
                   {isMain ? <VscPinned /> : <VscClose />}
                 </Button>

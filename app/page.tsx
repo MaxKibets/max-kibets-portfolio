@@ -6,7 +6,7 @@ export default function Home() {
     <article>
       <CommentedRows>
         <h2>Max Kibets - Frontend Developer</h2>
-        <p>passionate about building web applications that are scalable and impactful</p>
+        <p>Passionate about building web applications that are scalable and impactful</p>
       </CommentedRows>
       <section>
         <Heading>GREETING</Heading>

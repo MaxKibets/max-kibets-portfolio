@@ -16,7 +16,6 @@ const RowIndexer: FC<WithChildren> = ({ children }) => {
     const observer = new ResizeObserver(() => {
       const { height } = containerRef.current?.getBoundingClientRect() || { height: 0 };
 
-      console.log(height, parseFloat(window.getComputedStyle(document.body).lineHeight));
       setLinesCount(
         Math.round(height) /
           parseFloat(window.getComputedStyle(document.body).lineHeight) +
