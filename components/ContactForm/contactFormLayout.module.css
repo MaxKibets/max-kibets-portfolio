@@ -18,7 +18,7 @@
   transition: all 0.2s;
 
   &.error {
-    background-color: #4d1a1a;
+    background-color: var(--background-red);
   }
 }
 

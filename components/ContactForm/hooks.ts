@@ -18,7 +18,11 @@ export const useForm = <T extends Record<string, string>>({
       setErrors(error.flatten().fieldErrors as Errors<T>);
     }
 
-    await handleSubmit(fieldValues, success);
+    const submited = await handleSubmit(fieldValues, success);
+
+    if (submited) {
+      setFormData(initialState); // reset form
+    }
 
     return fieldValues;
   }

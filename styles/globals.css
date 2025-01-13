@@ -7,6 +7,8 @@
   --background: #1a1a1a;
   --background-light: #212121;
   --background-dark: #00000030;
+  --background-red: #4d1a1a;
+  --background-green: #c3e88d90;
   --foreground: #848484;
   --foreground-dark: #61616150;
   --foreground-light: #eff;
@@ -91,6 +93,29 @@ h2 {
 
 section:not(:last-child) {
   margin-bottom: var(--row-height);
+}
+
+#react-tiny-toast-main-container {
+  position: fixed;
+  width: 100%;
+}
+
+.toast-item {
+  margin-top: 5vh;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px 0 var(--border);
+  border-radius: 0.15rem;
+  animation-duration: 0.2s;
+  text-transform: uppercase;
+  filter: saturate(2);
+
+  &.toast-item-success {
+    background-color: var(--background-green);
+  }
+
+  &.toast-item-danger {
+    background-color: var(--background-red);
+  }
 }
 
 @media screen and (width <=1024px) {

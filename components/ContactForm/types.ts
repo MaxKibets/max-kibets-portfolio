@@ -28,7 +28,7 @@ export type UseFormReturs<T> = {
 };
 
 export type UseFormProps<T> = {
-  handleSubmit: (data: T, success: boolean) => void;
+  handleSubmit: (data: T, success: boolean) => boolean | Promise<boolean>;
   initialState: Awaited<T>;
   validationSchema: ZodObject<ZodRawShape>;
 };

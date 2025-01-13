@@ -1,5 +1,8 @@
 "use client";
 
+import { NOTIF_TYPE } from "@/constants";
+import { showNotification } from "@/utils";
+
 import { useForm } from "./hooks";
 import { FormState } from "./types";
 import ContactFormLayout from "./ContactFromLayout";
@@ -7,17 +10,31 @@ import { FORMSPARK_ACTION_URL, INITIAL_STATE, VALIDATION_SCHEMA } from "./consta
 
 const handleSubmit = async (data: FormState, success: boolean) => {
   if (!success) {
-    return;
+    return false;
   }
 
-  await fetch(FORMSPARK_ACTION_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify(data),
-  });
+  try {
+    const response = await fetch(FORMSPARK_ACTION_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      showNotification("Not sent, try again later");
+      return false;
+    }
+  } catch {
+    showNotification("Not sent, no connection");
+    return false;
+  }
+
+  showNotification("Successfully sent", NOTIF_TYPE.SUCCESS);
+
+  return true;
 };
 
 const ContactForm = () => {

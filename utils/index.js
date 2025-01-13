@@ -1,3 +1,4 @@
 import { getTitleByHref } from "./getTitleByHref";
+import { showNotification } from "./showNotification";
 
-export { getTitleByHref };
+export { getTitleByHref, showNotification };

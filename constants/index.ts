@@ -1,3 +1,5 @@
+import { Variant } from "react-tiny-toast";
+
 export const ROUTE = {
   MAIN: "/",
   SKILLS: "/skills",
@@ -36,4 +38,9 @@ export const HEADING_PREFIX = {
 export const HEADING_SUFFIX = {
   EQUAL: "suffixEqual",
   COLON: "suffixColon",
+} as const;
+
+export const NOTIF_TYPE = {
+  SUCCESS: "success" as Variant,
+  DANGER: "danger" as Variant,
 } as const;

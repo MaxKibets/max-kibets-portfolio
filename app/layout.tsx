@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Tabs from "@/components/Tabs";
 import ProgressBar from "@/components/ProgressBar";
 import RowIndexer from "@/components/RowIndexer";
+import NotificationContainer from "@/components/NotificationContainer";
 
 import "../styles/globals.css";
 
@@ -37,6 +38,7 @@ export default async function RootLayout({
             <RowIndexer>{children}</RowIndexer>
           </main>
         </ProgressBar>
+        <NotificationContainer />
       </body>
     </html>
   );
