@@ -47,7 +47,7 @@ body {
 body {
   min-height: 100vh;
   display: grid;
-  grid-template: "header header" "progress progress" auto "aside main" 1fr / auto 1fr;
+  grid-template: "header header" "progress progress" auto "aside main" 1fr / 3rem 1fr;
   color: var(--foreground-light);
   background: var(--background-light);
   font-family: var(--font-inconsolata), Arial, Helvetica, sans-serif;
@@ -122,6 +122,12 @@ section:not(:last-child) {
 @media screen and (width <=1024px) {
   :root {
     --size: 18px;
+  }
+
+  body {
+    grid-template: "header header" "progress progress" auto "aside main" 1fr / 2.5rem calc(
+        100vw - 2.5rem
+      );
   }
 }
 

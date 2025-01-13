@@ -39,7 +39,7 @@ const ExplorerLayout: FC<ExplorerLayoutProps> = ({ onClick, expanded }) => (
     <nav className={clsx(css.nav, { [css.expanded]: expanded })}>
       <ul className={css.list}>
         {Object.values(ROUTE).map((href) => (
-          <li key={href}>
+          <li key={href} className={css.item}>
             <NavLink href={href}>
               <IconLabel
                 size={SIZE.MEDIUM}
