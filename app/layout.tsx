@@ -40,7 +40,7 @@ export default async function RootLayout({
           </main>
         </ProgressBar>
         <NotificationContainer />
-        <Footer>footer in progress...</Footer>
+        <Footer />
       </body>
     </html>
   );
