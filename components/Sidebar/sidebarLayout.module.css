@@ -53,15 +53,23 @@
     transform: scale(1);
     border-right: 1px solid var(--border);
   }
+}
 
-  @media screen and (width <=1024px) {
-    & {
-      position: absolute;
-      top: 0;
+@media screen and (width <=1024px) {
+  .alt {
+    padding: 0.4rem;
+  }
 
-      /* 1px is a border width */
-      left: calc(100% + 1px);
-      bottom: 0;
-    }
+  .altIcon {
+    font-size: 1.3rem;
+  }
+
+  .explorer {
+    position: absolute;
+    top: 0;
+
+    /* 1px is a border width */
+    left: calc(100% + 1px);
+    bottom: 0;
   }
 }

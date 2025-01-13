@@ -14,10 +14,21 @@
   min-width: 1rem;
   text-align: right;
   color: var(--foreground-dark);
-  margin-top: calc(var(--line-height) / var(--size));
+  line-height: var(--row-height);
 }
 
 .content {
   padding-right: 1rem;
   flex: 1;
+}
+
+@media screen and (width <=1024px) {
+  .list {
+    min-width: 2rem;
+  }
+
+  .number {
+    font-size: 0.8rem;
+    min-width: 0.8rem;
+  }
 }
