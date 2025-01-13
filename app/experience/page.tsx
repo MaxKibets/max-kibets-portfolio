@@ -50,7 +50,6 @@ const ExperiencePage = () => (
     </CommentedRows>
     {EXP.map((item) => (
       <section key={item.COMPANY}>
-        {"{"}
         {Object.keys(item).map((key) => {
           const content = item[key as keyof typeof item];
 
@@ -67,7 +66,6 @@ const ExperiencePage = () => (
             </div>
           );
         })}
-        {"}"}
       </section>
     ))}
   </article>

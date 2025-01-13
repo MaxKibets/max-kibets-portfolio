@@ -1,6 +1,9 @@
 .group {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: var(--row-height);
   gap: var(--row-height);
+
+  &:not(:last-child) {
+    margin-bottom: var(--row-height);
+  }
 }

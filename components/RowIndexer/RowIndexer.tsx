@@ -16,16 +16,20 @@ const RowIndexer: FC<WithChildren> = ({ children }) => {
     const observer = new ResizeObserver(() => {
       const { height } = containerRef.current?.getBoundingClientRect() || { height: 0 };
 
+      console.log(height, parseFloat(window.getComputedStyle(document.body).lineHeight));
       setLinesCount(
-        height / parseFloat(window.getComputedStyle(document.body).lineHeight),
+        Math.round(height) /
+          parseFloat(window.getComputedStyle(document.body).lineHeight) +
+          1,
       );
     });
 
-    observer.observe(containerRef.current);
+    const container = containerRef.current;
+    observer.observe(container);
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+      if (container) {
+        observer.unobserve(container);
       }
     };
   }, []);

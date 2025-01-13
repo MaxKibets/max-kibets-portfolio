@@ -8,7 +8,6 @@
 }
 
 .button {
-  margin-top: var(--row-height);
   margin-left: auto;
 }
 
@@ -38,6 +37,6 @@
   }
 
   .button {
-    margin: 0 40% 0 auto;
+    margin-right: 40%;
   }
 }
