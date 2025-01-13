@@ -1,0 +1,7 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--background);
+  grid-area: footer;
+  position: relative;
+  z-index: var(--z-layout);
+}

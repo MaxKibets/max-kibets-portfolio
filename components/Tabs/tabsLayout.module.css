@@ -1,4 +1,5 @@
 .wrap {
+  height: var(--tabs-height);
   width: 100%;
   overflow-x: auto;
   font-size: 0.9rem;
@@ -6,6 +7,7 @@
 
 .tabs {
   display: flex;
+  height: 100%;
 }
 
 .pinned {

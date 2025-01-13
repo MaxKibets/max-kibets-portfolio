@@ -1,6 +1,8 @@
 .wrap {
   display: flex;
   align-items: flex-start;
+  height: var(--content-height);
+  overflow: auto;
 }
 
 .list {

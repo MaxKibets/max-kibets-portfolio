@@ -1,7 +1,16 @@
 :root {
   --size: 16px;
   --line-height: 1.375;
+  --header-height: calc(2.2rem + 1px);
+  --tabs-height: 2.25rem;
+  --footer-height: calc(1.5rem + 1px);
+  --sidebar-width: 3rem;
   --row-height: calc(var(--size) * var(--line-height));
+  --content-height: calc(
+    100vh - var(--header-height) - var(--tabs-height) - var(--footer-height)
+  );
+  --z-layout: 666;
+  --z-notif: 1488;
   --border: #00000060;
   --border-light: #4a4a4a;
   --background: #1a1a1a;
@@ -47,7 +56,12 @@ body {
 body {
   min-height: 100vh;
   display: grid;
-  grid-template: "header header" "progress progress" auto "aside main" 1fr / 3rem 1fr;
+  grid-template:
+    "header header" var(--header-height)
+    "progress progress" auto "aside main" calc(
+      100vh - var(--header-height) - var(--footer-height)
+    )
+    "footer footer" var(--footer-height) / auto 1fr;
   color: var(--foreground-light);
   background: var(--background-light);
   font-family: var(--font-inconsolata), Arial, Helvetica, sans-serif;
@@ -99,6 +113,7 @@ section:not(:last-child) {
 #react-tiny-toast-main-container {
   position: fixed;
   width: 100%;
+  z-index: var(--z-notif);
 }
 
 .toast-item {
@@ -122,11 +137,17 @@ section:not(:last-child) {
 @media screen and (width <=1024px) {
   :root {
     --size: 18px;
+    --sidebar-width: 2.5rem;
   }
 
   body {
-    grid-template: "header header" "progress progress" auto "aside main" 1fr / 2.5rem calc(
-        100vw - 2.5rem
+    grid-template:
+      "header header" var(--header-height)
+      "progress progress" auto "aside main" calc(
+        100vh - var(--header-height) - var(--footer-height)
+      )
+      "footer footer" var(--footer-height) / var(--sidebar-width) calc(
+        100vw - var(--sidebar-width)
       );
   }
 }

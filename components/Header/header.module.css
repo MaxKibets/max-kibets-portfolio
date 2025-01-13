@@ -1,10 +1,13 @@
 .header {
   grid-area: header;
+  height: var(--header-height);
   display: flex;
   align-items: center;
   padding: 0.4rem 0.6rem;
   border-bottom: 1px solid var(--border);
   background: var(--background);
+  position: relative;
+  z-index: var(--z-layout);
 }
 
 .logo {
