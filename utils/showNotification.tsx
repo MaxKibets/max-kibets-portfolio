@@ -1,19 +1,22 @@
 import { toast, Variant } from "react-tiny-toast";
-import { VscPass, VscError } from "react-icons/vsc";
+import { VscError } from "react-icons/vsc";
 
 import { IconLabel } from "@/components/ui";
 import { NOTIF_TYPE } from "@/constants";
+import { ReactNode } from "react";
 
-export const showNotification = (message: string, type: Variant = NOTIF_TYPE.DANGER) => {
-  toast.show(
-    <IconLabel
-      prefixIcon={type === NOTIF_TYPE.SUCCESS ? <VscPass /> : <VscError />}
-      text={message}
-    />,
-    {
-      variant: type,
-      timeout: 3000,
-      position: "top-center",
-    },
-  );
+export const showNotification = ({
+  message,
+  type = NOTIF_TYPE.DANGER,
+  icon = <VscError />,
+}: {
+  message: string;
+  type?: Variant;
+  icon?: ReactNode;
+}) => {
+  toast.show(<IconLabel prefixIcon={icon} text={message} />, {
+    variant: type,
+    timeout: 2000,
+    position: "top-center",
+  });
 };

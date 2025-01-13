@@ -1,5 +1,7 @@
 "use client";
 
+import { VscPass } from "react-icons/vsc";
+
 import { NOTIF_TYPE } from "@/constants";
 import { showNotification } from "@/utils";
 
@@ -24,15 +26,19 @@ const handleSubmit = async (data: FormState, success: boolean) => {
     });
 
     if (!response.ok) {
-      showNotification("Not sent, try again later");
+      showNotification({ message: "Not sent, try again later" });
       return false;
     }
   } catch {
-    showNotification("Not sent, no connection");
+    showNotification({ message: "Not sent, no connection" });
     return false;
   }
 
-  showNotification("Successfully sent", NOTIF_TYPE.SUCCESS);
+  showNotification({
+    message: "Successfully sent",
+    type: NOTIF_TYPE.SUCCESS,
+    icon: <VscPass />,
+  });
 
   return true;
 };
