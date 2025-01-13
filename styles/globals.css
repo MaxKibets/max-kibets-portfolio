@@ -79,6 +79,7 @@ a {
 
 svg {
   display: block;
+  pointer-events: none;
 }
 
 h1,

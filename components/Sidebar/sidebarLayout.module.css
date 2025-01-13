@@ -56,8 +56,12 @@
 }
 
 @media screen and (width <=1024px) {
+  .sidebar {
+    font-size: 1.2rem;
+  }
+
   .alt {
-    padding: 0.4rem;
+    padding: 0.6rem;
   }
 
   .altIcon {
@@ -67,9 +71,11 @@
   .explorer {
     position: absolute;
     top: 0;
-
-    /* 1px is a border width */
-    left: calc(100% + 1px);
+    left: 100%;
     bottom: 0;
+
+    &.expanded {
+      width: 15rem;
+    }
   }
 }
