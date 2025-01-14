@@ -56,11 +56,12 @@ const handleSubmit = async (data: FormState, success: boolean) => {
 };
 
 const ContactForm = () => {
-  const { register, handleReraptchaChange, formAction, errors } = useForm<FormState>({
-    handleSubmit,
-    initialState: INITIAL_STATE,
-    validationSchema: VALIDATION_SCHEMA,
-  });
+  const { register, handleReraptchaChange, formAction, errors, pending } =
+    useForm<FormState>({
+      handleSubmit,
+      initialState: INITIAL_STATE,
+      validationSchema: VALIDATION_SCHEMA,
+    });
 
   return (
     <ContactFormLayout
@@ -68,6 +69,7 @@ const ContactForm = () => {
       formAction={formAction}
       errors={errors}
       onRecaptchaChange={handleReraptchaChange}
+      pending={pending}
     />
   );
 };

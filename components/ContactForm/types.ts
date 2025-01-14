@@ -9,7 +9,7 @@ export type FormState = Record<Field, string>;
 
 export type Event = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
-export type Errors<T> = Record<keyof T, string[] | undefined>;
+export type Errors<T> = Record<keyof T, string[] | undefined | null>;
 
 export type Register<T> = (name: keyof T) => {
   name: keyof T;
@@ -38,5 +38,5 @@ export type UseFormProps<T> = {
 
 export type ContactFormLayoutProps = Omit<
   UseFormReturs<FormState>,
-  "pending" | "formData" | "handleReraptchaChange"
+  "formData" | "handleReraptchaChange"
 > & { onRecaptchaChange: RecatchaChangeCallback };

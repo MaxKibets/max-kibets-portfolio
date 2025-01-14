@@ -13,6 +13,7 @@ const ContactFormLayout: FC<ContactFormLayoutProps> = ({
   formAction,
   errors,
   onRecaptchaChange,
+  pending,
 }) => (
   <form className={css.form} action={formAction}>
     {FIELDS.slice(1, 4).map((field) => (
@@ -56,6 +57,7 @@ const ContactFormLayout: FC<ContactFormLayoutProps> = ({
         title="Click to send your message"
         outlined
         className={css.button}
+        disabled={pending}
       >
         SEND
       </Button>

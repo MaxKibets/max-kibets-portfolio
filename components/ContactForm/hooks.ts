@@ -40,7 +40,7 @@ export const useForm = <T extends Record<string, string>>({
     const { error } = validationSchema
       .pick({ [name]: true })
       .safeParse({ [name]: value });
-    const { fieldErrors } = error?.flatten() || { fieldErrors: { [name]: "" } };
+    const { fieldErrors } = error?.flatten() || { fieldErrors: { [name]: null } };
 
     setErrors((prevErrors) => ({ ...prevErrors, ...fieldErrors }));
   };
@@ -48,6 +48,7 @@ export const useForm = <T extends Record<string, string>>({
   const handleReraptchaChange = (token: string | null) => {
     if (token) {
       setFormData((prev) => ({ ...prev, [RECAPTCHA_FIELD_NAME]: token }));
+      setErrors((prevErrors) => ({ ...prevErrors, [RECAPTCHA_FIELD_NAME]: null }));
     }
   };
 
