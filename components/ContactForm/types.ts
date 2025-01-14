@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
-
 import { ZodObject, ZodRawShape } from "zod";
+
 import { FIELDS } from "./constants";
 
 export type Field = (typeof FIELDS)[number];
@@ -19,12 +19,15 @@ export type Register<T> = (name: keyof T) => {
 
 export type FormAction = (payload: FormData) => void;
 
+type RecatchaChangeCallback = (token: string | null) => void;
+
 export type UseFormReturs<T> = {
+  register: Register<T>;
   formAction: FormAction;
+  errors: Errors<T>;
+  handleReraptchaChange: RecatchaChangeCallback;
   pending: boolean;
   formData: T;
-  errors: Errors<T>;
-  register: Register<T>;
 };
 
 export type UseFormProps<T> = {
@@ -32,3 +35,8 @@ export type UseFormProps<T> = {
   initialState: Awaited<T>;
   validationSchema: ZodObject<ZodRawShape>;
 };
+
+export type ContactFormLayoutProps = Omit<
+  UseFormReturs<FormState>,
+  "pending" | "formData" | "handleReraptchaChange"
+> & { onRecaptchaChange: RecatchaChangeCallback };

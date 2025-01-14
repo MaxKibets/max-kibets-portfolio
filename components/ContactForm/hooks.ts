@@ -1,5 +1,7 @@
 import { useActionState, useState } from "react";
+
 import { Errors, UseFormProps, UseFormReturs, Event } from "./types";
+import { RECAPTCHA_FIELD_NAME } from "./constants";
 
 export const useForm = <T extends Record<string, string>>({
   handleSubmit,
@@ -43,6 +45,12 @@ export const useForm = <T extends Record<string, string>>({
     setErrors((prevErrors) => ({ ...prevErrors, ...fieldErrors }));
   };
 
+  const handleReraptchaChange = (token: string | null) => {
+    if (token) {
+      setFormData((prev) => ({ ...prev, [RECAPTCHA_FIELD_NAME]: token }));
+    }
+  };
+
   const register = (name: keyof T) => ({
     name,
     onChange: handleChange,
@@ -50,5 +58,5 @@ export const useForm = <T extends Record<string, string>>({
     value: formData[name],
   });
 
-  return { formData, errors, register, formAction, pending };
+  return { formData, errors, register, handleReraptchaChange, formAction, pending };
 };

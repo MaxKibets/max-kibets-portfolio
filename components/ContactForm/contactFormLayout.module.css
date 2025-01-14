@@ -21,6 +21,45 @@
   }
 }
 
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--row-height);
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.recaptchaWrap {
+  position: relative;
+}
+
+.recaptcha {
+  position: relative;
+  box-shadow: 0 0 0 1px var(--border-light);
+  border-radius: 0.15rem;
+  overflow: hidden;
+  width: 298px;
+  height: 73px;
+
+  & > div {
+    position: relative;
+    left: -2px;
+    top: -2px;
+  }
+}
+
+@media screen and (width <=400px) {
+  .recaptcha {
+    width: 220px;
+    height: 53px;
+
+    & > div {
+      transform: scale(0.74);
+      transform-origin: 0 0;
+    }
+  }
+}
+
 @media screen and (width >=768px) {
   .row {
     display: flex;
