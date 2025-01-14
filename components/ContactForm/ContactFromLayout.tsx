@@ -44,7 +44,7 @@ const ContactFormLayout: FC<ContactFormLayoutProps> = ({
       <div className={css.recaptchaWrap}>
         <ReCAPTCHA
           onChange={onRecaptchaChange}
-          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
           theme="dark"
           badge="bottomleft"
           className={css.recaptcha}
