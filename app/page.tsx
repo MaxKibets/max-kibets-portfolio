@@ -1,13 +1,29 @@
+import Image from "next/image";
+
 import { CommentedRows, Heading, NavLink, Paragraph, Group } from "@/components/ui";
 import { ROUTE } from "@/constants";
 
+import css from "./home.module.css";
+
 export default function Home() {
   return (
-    <article>
+    <article className={css.wrap}>
       <CommentedRows>
         <h2>Max Kibets - Frontend Developer</h2>
         <p>Passionate about building web applications that are scalable and impactful</p>
       </CommentedRows>
+      <div className={css.sidebar}>
+        <Image
+          src="/photo.jpg"
+          alt="Max Kibets"
+          width={148}
+          height={148}
+          className={css.photo}
+        />
+        {/* <NavLink href={"/Maksym_Kibets_CV.pdf"} target="_blank" outlined>
+          DOWNLOAD CV
+        </NavLink> */}
+      </div>
       <section>
         <Heading>GREETING</Heading>
         <Paragraph>

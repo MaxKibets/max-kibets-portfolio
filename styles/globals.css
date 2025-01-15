@@ -54,7 +54,8 @@ body {
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
+  max-width: 1650px;
   display: grid;
   grid-template:
     "header header" var(--header-height)
@@ -67,10 +68,13 @@ body {
   font-family: var(--font-inconsolata), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+  margin: auto;
 }
 
 main {
   grid-area: main;
+  background-color: var(--background-light);
 }
 
 * {
@@ -86,7 +90,8 @@ a {
   cursor: pointer;
   color: var(--foreground-carroty);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--foreground-light);
   }
 }

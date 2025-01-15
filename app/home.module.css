@@ -1,0 +1,36 @@
+.wrap {
+  display: grid;
+}
+
+.sidebar {
+  margin: 0 auto var(--row-height);
+}
+
+.photo {
+  display: block;
+  width: 148px;
+  height: 148px;
+  border: 3px solid var(--border-light);
+  border-radius: 0.3rem;
+  margin-bottom: var(--row-height);
+  box-shadow: 0 0 10px 0 var(--border);
+}
+
+@media screen and (width >=768px) {
+  .wrap {
+    grid-template-columns: minmax(auto, 800px) auto;
+    column-gap: 1rem;
+  }
+
+  .sidebar {
+    height: 100%;
+    grid-row: -1/6;
+    grid-column: 2;
+    margin-bottom: auto;
+  }
+
+  .photo {
+    width: 154px;
+    height: 154px;
+  }
+}

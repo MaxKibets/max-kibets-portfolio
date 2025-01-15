@@ -1,18 +1,16 @@
 .link {
   text-decoration: none;
   color: var(--foreground);
-
-  &:hover,
-  &:focus {
-    color: var(--foreground-light);
-  }
+  text-align: center;
+  display: block;
 }
 
 .active {
   color: var(--foreground-turquoise);
   cursor: default;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--foreground-turquoise);
   }
 

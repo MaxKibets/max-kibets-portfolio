@@ -20,7 +20,7 @@
 }
 
 .content {
-  padding-right: 1rem;
+  padding: var(--row-height) 2rem var(--row-height) 0;
   flex: 1;
 }
 
