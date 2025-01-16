@@ -1,6 +1,8 @@
-import { ACTION_VARIANT, HREF } from "@/constants";
+import { ACTION_VARIANT, HREF, ROUTE } from "@/constants";
 
 export type WithChildren<T = object> = T & { children?: React.ReactNode };
+
+export type Route = (typeof ROUTE)[keyof typeof ROUTE];
 
 export type Href = (typeof HREF)[keyof typeof HREF];
 
