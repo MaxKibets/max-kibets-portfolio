@@ -59,7 +59,7 @@ const ExperiencePage = () => (
               {typeof content === "string" ? (
                 <Paragraph>{content}</Paragraph>
               ) : (
-                <List items={content} />
+                <List items={content} itemRenderer={(item) => <>&quot;{item}&quot;</>} />
               )}
             </div>
           );

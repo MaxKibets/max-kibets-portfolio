@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import {
   SiJavascript,
   SiReact,
@@ -22,8 +21,10 @@ import {
   SiNpm,
   SiYarn,
 } from "react-icons/si";
+import { RiBearSmileFill } from "react-icons/ri";
 
 import { CommentedRows, Heading, IconLabel, List } from "@/components/ui";
+import { ListItem } from "@/types";
 
 const STACK = {
   GENERAL: [
@@ -34,15 +35,15 @@ const STACK = {
     ["HTML5", "https://en.wikipedia.org/wiki/HTML5", <SiHtml5 key="html" />],
     ["CSS3", "https://en.wikipedia.org/wiki/CSS", <SiCss3 key="css" />],
     ["Sass", "https://sass-lang.com/", <SiSass key="sass" />],
-  ],
+  ] as ListItem[],
   ADDITIONAL: [
     [
       "Apollo GraphQL",
       "https://www.apollographql.com/",
       <SiApollographql key="apollo" />,
     ],
-    // ["Zustand", "https://zustand.docs.pmnd.rs/", <SiZustand key="zustand" />],
     ["Redux", "https://redux.js.org/", <SiRedux key="redux" />],
+    ["Zustand", "https://zustand.docs.pmnd.rs/", <RiBearSmileFill key="zustand" />], // react-icond doesn't have an icon for Zustand
     ["React Router", "https://reactrouter.com/", <SiReactrouter key="react-router" />],
     ["TailwindCSS", "https://tailwindcss.com/", <SiTailwindcss key="tailwind" />],
     ["MaterialUI", "https://mui.com/", <SiMaterialdesign key="material-ui" />],
@@ -52,7 +53,7 @@ const STACK = {
       "https://testing-library.com",
       <SiTestinglibrary key="rtl" />,
     ],
-  ],
+  ] as ListItem[],
   TOOLS: [
     ["Git", "https://git-scm.com/", <SiGit key="git" />],
     ["Bash", "https://en.wikipedia.org/wiki/Bash_(Unix_shell)", <SiGnubash key="bash" />],
@@ -61,10 +62,10 @@ const STACK = {
     ["Eslint", "https://eslint.org/", <SiEslint key="eslint" />],
     ["NPM", "https://www.npmjs.com/", <SiNpm key="npm" />],
     ["Yarn", "https://yarnpkg.com/", <SiYarn key="yarn" />],
-  ],
+  ] as ListItem[],
 };
 
-const listItemRenderer = ([text, href, icon]: [string, string, JSX.Element]) => (
+const listItemRenderer = ([text, href, icon]: ListItem) => (
   <a href={href} title={text} target="_blank">
     <IconLabel text={text} prefixIcon={icon} inline />
   </a>
