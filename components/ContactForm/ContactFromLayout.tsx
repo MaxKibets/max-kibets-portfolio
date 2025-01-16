@@ -60,7 +60,7 @@ const ContactFormLayout: FC<ContactFormLayoutProps> = ({
         className={css.button}
         disabled={pending}
       >
-        SEND
+        submit
       </Action>
     </div>
   </form>

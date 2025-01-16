@@ -40,5 +40,6 @@ export const ACTION_VARIANT = {
   SHADED: "shaded",
   OUTLINED: "outlined",
   UNDERLINED: "underlined",
+  FILLED: "filled",
   DEFAULT: "default",
 } as const;

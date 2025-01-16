@@ -19,7 +19,7 @@ export default function Home() {
     <article className={css.wrap}>
       <CommentedRows>
         <h2>Max Kibets - Frontend Developer</h2>
-        <p>Passionate about building web applications that are scalable and impactful</p>
+        <p>Passionate about building web applications that are scalable and impactful.</p>
       </CommentedRows>
       <div className={css.sidebar}>
         <Image
@@ -29,8 +29,13 @@ export default function Home() {
           height={148}
           className={css.photo}
         />
-        <Action href={CV_HREF} target="_blank" variant={ACTION_VARIANT.OUTLINED}>
-          <IconLabel prefixIcon={<VscSave />} text="DOWNLOAD CV" />
+        <Action
+          href={CV_HREF}
+          target="_blank"
+          variant={ACTION_VARIANT.FILLED}
+          title="Cick to download"
+        >
+          <IconLabel prefixIcon={<VscSave />} text="download cv" />
         </Action>
       </div>
       <section>

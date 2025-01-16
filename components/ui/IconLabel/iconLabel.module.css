@@ -2,4 +2,9 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  text-decoration: inherit;
+
+  &.inline {
+    display: inline-flex;
+  }
 }

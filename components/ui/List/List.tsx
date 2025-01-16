@@ -4,8 +4,8 @@ import { FC, JSX } from "react";
 import css from "./list.module.css";
 
 const List: FC<{
-  items: string[][] | string[];
-  itemRenderer?: (props: string[]) => JSX.Element;
+  items: [string, string, JSX.Element][] | string[];
+  itemRenderer?: (props: [string, string, JSX.Element]) => JSX.Element;
 }> = ({ items, itemRenderer }) => (
   <ul className={css.list}>
     <span className={css.prefix}>[&nbsp;</span>
@@ -16,7 +16,11 @@ const List: FC<{
           key={index}
           className={clsx(css.item, index !== items.length - 1 && css.itemWithComma)}
         >
-          &quot;{itemRenderer && Array.isArray(item) ? itemRenderer(item) : item}&quot;
+          {itemRenderer && Array.isArray(item) ? (
+            itemRenderer(item)
+          ) : (
+            <>&quot;{item}&quot;</>
+          )}
         </li>
       );
     })}

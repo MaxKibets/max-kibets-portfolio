@@ -41,11 +41,12 @@ const ExperiencePage = () => (
   <article>
     <CommentedRows>
       <h2>MY EXPERIENCE</h2>
+      <p>It all started with a fascination for how websites work.</p>
       <p>
-        It all started with a fascination for how websites work. Since then, I’ve taken on
-        challenges, learned new skills, and built projects that I’m truly proud of.
-        Here&apos;s a glimpse into where my journey has taken me so far
+        Since then, I’ve taken on challenges, learned new skills, and built projects that
+        I’m truly proud of.
       </p>
+      <p>Here&apos;s a glimpse into where my journey has taken me so far.</p>
     </CommentedRows>
     {EXP.map((item) => (
       <section key={item.COMPANY}>

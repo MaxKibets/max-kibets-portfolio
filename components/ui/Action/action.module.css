@@ -34,18 +34,29 @@
 }
 
 .outlined {
-  padding: 0 1rem;
-  box-shadow: inset 0 0 0 1px var(--foreground-yellow);
+  box-shadow: 0 0 0 1px var(--foreground-yellow);
+
+  &.disabled {
+    color: var(--foreground);
+    box-shadow: 0 0 0 1px var(--foreground);
+  }
+}
+
+.filled {
+  box-shadow: 0 0 0 1px rgb(220 220 170 / 15%);
+  background-color: rgb(220 220 170 / 15%);
+}
+
+.outlined,
+.filled {
+  display: flex;
+  justify-content: center;
+  padding: 0 0.6rem;
   color: var(--foreground-yellow);
   text-transform: uppercase;
 
   &:not(.disabled):hover {
-    box-shadow: inset 0 0 0 1px var(--foreground-light);
-  }
-
-  &.disabled {
-    color: var(--foreground);
-    box-shadow: inset 0 0 0 1px var(--foreground);
+    box-shadow: 0 0 0 1px var(--foreground-light);
   }
 }
 

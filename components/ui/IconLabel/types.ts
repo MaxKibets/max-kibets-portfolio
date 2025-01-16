@@ -4,4 +4,5 @@ export type IconLabelProps = {
   text: string;
   className?: string;
   onClick?: () => void;
+  inline?: boolean;
 };

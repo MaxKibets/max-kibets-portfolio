@@ -10,8 +10,12 @@ const IconLabel: FC<IconLabelProps> = ({
   suffixIcon,
   className,
   onClick,
+  inline,
 }) => (
-  <span className={clsx(css.iconLabel, className)} onClick={onClick}>
+  <span
+    className={clsx(css.iconLabel, className, { [css.inline]: inline })}
+    onClick={onClick}
+  >
     {prefixIcon}
     {text}
     {suffixIcon}
