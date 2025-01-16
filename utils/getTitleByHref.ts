@@ -1,7 +1,6 @@
-import { Href } from "next";
-
 import { ROUTE } from "@/constants";
 import { PAGE_TITLE } from "@/constants";
+import { Href } from "@/types";
 
 export const getTitleByHref = (href: Href) => {
   const routeKey = Object.keys(ROUTE).find(
