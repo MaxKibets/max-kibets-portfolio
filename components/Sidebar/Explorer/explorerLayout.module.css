@@ -28,6 +28,11 @@
   list-style: none;
 }
 
+.folder,
+.link {
+  padding: 0.15rem 0;
+}
+
 .folder {
   color: var(--foreground);
   cursor: pointer;
@@ -39,8 +44,8 @@
 }
 
 @media screen and (width <=1024px) {
-  .item,
+  .link,
   .folder {
-    padding: 0.2rem 0;
+    padding: 0.35rem 0;
   }
 }

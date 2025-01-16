@@ -2,7 +2,7 @@ import { FC } from "react";
 import clsx from "clsx";
 import { VscClose, VscFileCode, VscPinned } from "react-icons/vsc";
 
-import { ACTION_VARIANT, ROUTE, SIZE } from "@/constants";
+import { ACTION_VARIANT, ROUTE } from "@/constants";
 import { Action, IconLabel, NavLink } from "@/components/ui";
 import { getTitleByHref } from "@/utils";
 
@@ -24,11 +24,10 @@ const TabsLayout: FC<TabsLayoutProps> = ({ tabs, onCloseClick }) => (
           <NavLink
             key={href}
             href={href}
-            className={clsx({ [css.pinned]: isMain })}
+            className={clsx(css.tab, { [css.pinned]: isMain })}
             variant={ACTION_VARIANT.UNDERLINED}
           >
             <IconLabel
-              size={SIZE.LARGE}
               text={getTitleByHref(href)}
               prefixIcon={<VscFileCode />}
               suffixIcon={

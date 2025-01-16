@@ -9,7 +9,7 @@ import {
 import clsx from "clsx";
 
 import { Action, IconLabel, NavLink } from "@/components/ui";
-import { ACTION_VARIANT, ROUTE, SIZE } from "@/constants";
+import { ACTION_VARIANT, ROUTE } from "@/constants";
 import { getTitleByHref } from "@/utils";
 
 import { ExplorerLayoutProps } from "./types";
@@ -43,13 +43,9 @@ const ExplorerLayout: FC<ExplorerLayoutProps> = ({ onClick, expanded }) => (
     <nav className={clsx(css.nav, { [css.expanded]: expanded })}>
       <ul className={css.list}>
         {Object.values(ROUTE).map((href) => (
-          <li key={href} className={css.item}>
-            <NavLink href={href}>
-              <IconLabel
-                size={SIZE.MEDIUM}
-                text={getTitleByHref(href)}
-                prefixIcon={<VscFileCode />}
-              />
+          <li key={href}>
+            <NavLink href={href} className={css.link}>
+              <IconLabel text={getTitleByHref(href)} prefixIcon={<VscFileCode />} />
             </NavLink>
           </li>
         ))}

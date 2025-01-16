@@ -5,9 +5,15 @@
   font-size: 0.9rem;
 }
 
-.tabs {
+.tabs,
+.tab {
   display: flex;
   height: 100%;
+}
+
+.tab {
+  padding: 0 0.6rem;
+  align-items: center;
 }
 
 .pinned {

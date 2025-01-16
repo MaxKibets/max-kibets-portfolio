@@ -7,12 +7,6 @@ export const ROUTE = {
   CONTACT: "/contact",
 } as const;
 
-export const SIZE = {
-  SMALL: "small",
-  MEDIUM: "medium",
-  LARGE: "large",
-} as const;
-
 // TODO move to a separate file because this is text content.
 export const PAGE_TITLE = {
   MAIN: "main",
