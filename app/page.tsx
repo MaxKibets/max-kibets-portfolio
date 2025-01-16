@@ -29,6 +29,8 @@ export default function Home() {
           width={148}
           height={148}
           className={css.photo}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcvHzNfwAG4gL34mYCRwAAAABJRU5ErkJggg=="
         />
         <Action
           href={CV_HREF}

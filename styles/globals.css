@@ -30,20 +30,11 @@
 
 /* @media (prefers-color-scheme: dark) {
   :root {
-    --border: #00000060;
-    --border-light: #4a4a4a;
-    --background: #1a1a1a;
-    --background-light: #212121;
-    --background-dark: #00000030;
-    --foreground: #848484;
-    --foreground-dark: #61616160;
-    --foreground-light: #eff;
-    --foreground-turquoise: #80cbc4;
+    TODO dark mode / light mode
   }
 } */
 
 html {
-  /* TODO: for mob 14px */
   font-size: var(--size);
   line-height: var(--line-height);
 }
