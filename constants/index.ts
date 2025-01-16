@@ -7,6 +7,13 @@ export const ROUTE = {
   CONTACT: "/contact",
 } as const;
 
+export const CV_HREF = "/Maksym_Kibets_CV.pdf" as const;
+
+export const HREF = {
+  ...ROUTE,
+  CV_HREF,
+} as const;
+
 // TODO move to a separate file because this is text content.
 export const PAGE_TITLE = {
   MAIN: "main",
@@ -22,16 +29,6 @@ export const HEADING_LEVEL = {
   H2: 2,
   H3: 3,
   H4: 4,
-} as const;
-
-export const HEADING_PREFIX = {
-  CONST: "prefixConst",
-  NONE: "",
-} as const;
-
-export const HEADING_SUFFIX = {
-  EQUAL: "suffixEqual",
-  COLON: "suffixColon",
 } as const;
 
 export const NOTIF_TYPE = {

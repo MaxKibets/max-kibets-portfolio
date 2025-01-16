@@ -1,16 +1,16 @@
 import { MouseEvent } from "react";
 
-import { Route } from "@/types";
+import { Href } from "@/types";
 
 export type CloseClickCallback = ({
   href,
   event,
 }: {
-  href: Route;
+  href: Href;
   event: MouseEvent<HTMLAnchorElement | HTMLButtonElement>;
 }) => void;
 
 export type TabsLayoutProps = {
-  tabs: Route[];
+  tabs: Href[];
   onCloseClick: CloseClickCallback;
 };

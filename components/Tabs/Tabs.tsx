@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 import { ROUTE } from "@/constants";
-import { Route } from "@/types";
+import { Href } from "@/types";
 import { usePageTransition } from "@/hooks";
 
 import TabsLayout from "./TabsLayout";
 import { CloseClickCallback } from "./types";
 
 const Tabs = () => {
-  const pathname = usePathname() as Route;
-  const [tabs, setTabs] = useState<Route[]>([ROUTE.MAIN]);
+  const pathname = usePathname() as Href;
+  const [tabs, setTabs] = useState<Href[]>([ROUTE.MAIN]);
   const changeRoute = usePageTransition();
 
   useEffect(() => {

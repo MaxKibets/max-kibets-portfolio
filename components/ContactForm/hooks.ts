@@ -24,6 +24,7 @@ export const useForm = <T extends Record<string, string>>({
 
     if (submited) {
       setFormData(initialState); // reset form
+      setErrors({} as Errors<T>);
     }
 
     return fieldValues;

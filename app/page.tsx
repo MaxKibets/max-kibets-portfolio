@@ -1,7 +1,16 @@
 import Image from "next/image";
+import { VscSave } from "react-icons/vsc";
 
-import { CommentedRows, Heading, NavLink, Paragraph, Group } from "@/components/ui";
-import { ACTION_VARIANT, ROUTE } from "@/constants";
+import {
+  CommentedRows,
+  Heading,
+  NavLink,
+  Action,
+  Paragraph,
+  Group,
+  IconLabel,
+} from "@/components/ui";
+import { ACTION_VARIANT, CV_HREF, PAGE_TITLE, ROUTE } from "@/constants";
 
 import css from "./home.module.css";
 
@@ -20,9 +29,9 @@ export default function Home() {
           height={148}
           className={css.photo}
         />
-        {/* <NavLink href={"/Maksym_Kibets_CV.pdf"} target="_blank" outlined>
-          DOWNLOAD CV
-        </NavLink> */}
+        <Action href={CV_HREF} target="_blank" variant={ACTION_VARIANT.OUTLINED}>
+          <IconLabel prefixIcon={<VscSave />} text="DOWNLOAD CV" />
+        </Action>
       </div>
       <section>
         <Heading>GREETING</Heading>
@@ -53,13 +62,13 @@ export default function Home() {
         </CommentedRows>
         <Group>
           <NavLink href={ROUTE.SKILLS} variant={ACTION_VARIANT.OUTLINED}>
-            MY SKILLS
+            {PAGE_TITLE.SKILLS}
           </NavLink>
           <NavLink href={ROUTE.EXPERIENCE} variant={ACTION_VARIANT.OUTLINED}>
-            MY EXPERIENCE
+            {PAGE_TITLE.EXPERIENCE}
           </NavLink>
           <NavLink href={ROUTE.CONTACT} variant={ACTION_VARIANT.OUTLINED}>
-            GET IN TOUCH
+            {PAGE_TITLE.CONTACT}
           </NavLink>
         </Group>
       </section>

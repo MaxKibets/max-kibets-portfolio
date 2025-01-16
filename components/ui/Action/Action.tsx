@@ -17,6 +17,7 @@ const Action: FC<ActionProps> = ({
   active,
   onClick,
   title,
+  target,
 }) => {
   const classNames = clsx(css.action, className, css[variant], {
     [css.disabled]: disabled,
@@ -25,7 +26,13 @@ const Action: FC<ActionProps> = ({
 
   if (href) {
     return (
-      <Link href={href} className={classNames} onClick={onClick} title={title}>
+      <Link
+        href={href}
+        className={classNames}
+        onClick={onClick}
+        title={title}
+        target={target}
+      >
         {children}
       </Link>
     );

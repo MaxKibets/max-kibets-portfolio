@@ -3,14 +3,14 @@ import { usePathname, useRouter } from "next/navigation";
 
 import { PROGRESS_STATE } from "@/components/ProgressBar/constants";
 import { useProgressBarContext } from "@/components/ProgressBar/hooks";
-import { Route } from "@/types";
+import { Href } from "@/types";
 
 export const usePageTransition = () => {
   const pathname = usePathname();
   const router = useRouter();
   const setProgressState = useProgressBarContext();
 
-  return (href: Route) => {
+  return (href: Href) => {
     if (href === pathname) {
       return;
     }

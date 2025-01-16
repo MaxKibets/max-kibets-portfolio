@@ -1,7 +1,7 @@
-import { ActionVariant, Route, WithChildren } from "@/types";
+import { ActionVariant, Href, WithChildren } from "@/types";
 
 export type NavLinkProps = WithChildren<{
-  href: Route;
+  href: Href;
   variant?: ActionVariant;
   outlined?: boolean;
   className?: string;

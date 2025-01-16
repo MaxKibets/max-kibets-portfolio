@@ -1,8 +1,8 @@
-import { ActionVariant, Route, WithChildren } from "@/types";
+import { ActionVariant, Href, WithChildren } from "@/types";
 import { MouseEventHandler } from "react";
 
 export type ActionProps = WithChildren<{
-  href?: Route;
+  href?: Href;
   disabled?: boolean;
   className?: string;
   type?: "button" | "submit" | "reset" | undefined;
@@ -10,4 +10,5 @@ export type ActionProps = WithChildren<{
   active?: boolean;
   onClick?: MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;
   title?: string;
+  target?: "_blank" | "_self" | "_parent" | "_top";
 }>;

@@ -1,5 +1,4 @@
 import { CommentedRows, Heading, List, Paragraph } from "@/components/ui";
-import { HEADING_PREFIX, HEADING_SUFFIX } from "@/constants";
 
 const EXP = [
   {
@@ -55,9 +54,7 @@ const ExperiencePage = () => (
 
           return (
             <div key={key}>
-              <Heading prefix={HEADING_PREFIX.NONE} suffix={HEADING_SUFFIX.COLON}>
-                {key}
-              </Heading>
+              <Heading>{key}</Heading>
               {typeof content === "string" ? (
                 <Paragraph>{content}</Paragraph>
               ) : (
