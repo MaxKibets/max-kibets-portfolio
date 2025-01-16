@@ -1,3 +1,5 @@
+import { MouseEvent } from "react";
+
 import { Route } from "@/types";
 
 export type CloseClickCallback = ({
@@ -5,7 +7,7 @@ export type CloseClickCallback = ({
   event,
 }: {
   href: Route;
-  event: React.MouseEvent<HTMLButtonElement>;
+  event: MouseEvent<HTMLAnchorElement | HTMLButtonElement>;
 }) => void;
 
 export type TabsLayoutProps = {

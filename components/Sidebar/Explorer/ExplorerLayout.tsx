@@ -8,8 +8,8 @@ import {
 } from "react-icons/vsc";
 import clsx from "clsx";
 
-import { Button, IconLabel, NavLink } from "@/components/ui";
-import { ROUTE, SIZE } from "@/constants";
+import { Action, IconLabel, NavLink } from "@/components/ui";
+import { ACTION_VARIANT, ROUTE, SIZE } from "@/constants";
 import { getTitleByHref } from "@/utils";
 
 import { ExplorerLayoutProps } from "./types";
@@ -26,9 +26,13 @@ const ExplorerLayout: FC<ExplorerLayoutProps> = ({ onClick, expanded }) => (
   <>
     <div className={css.title}>
       <span>{TEXT.EXPLORER}</span>
-      <Button onClick={onClick} title={expanded ? TEXT.COLLAPS : TEXT.EXPAND}>
+      <Action
+        onClick={onClick}
+        title={expanded ? TEXT.COLLAPS : TEXT.EXPAND}
+        variant={ACTION_VARIANT.SHADED}
+      >
         {expanded ? <VscCollapseAll /> : <VscExpandAll />}
-      </Button>
+      </Action>
     </div>
     <IconLabel
       className={css.folder}

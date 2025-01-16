@@ -44,3 +44,10 @@ export const NOTIF_TYPE = {
   SUCCESS: "success" as Variant,
   DANGER: "danger" as Variant,
 } as const;
+
+export const ACTION_VARIANT = {
+  SHADED: "shaded",
+  OUTLINED: "outlined",
+  UNDERLINED: "underlined",
+  DEFAULT: "default",
+} as const;

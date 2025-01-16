@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { CommentedRows, Heading, NavLink, Paragraph, Group } from "@/components/ui";
-import { ROUTE } from "@/constants";
+import { ACTION_VARIANT, ROUTE } from "@/constants";
 
 import css from "./home.module.css";
 
@@ -52,13 +52,13 @@ export default function Home() {
           Click to get more information about me or to get in touch
         </CommentedRows>
         <Group>
-          <NavLink href={ROUTE.SKILLS} outlined>
+          <NavLink href={ROUTE.SKILLS} variant={ACTION_VARIANT.OUTLINED}>
             MY SKILLS
           </NavLink>
-          <NavLink href={ROUTE.EXPERIENCE} outlined>
+          <NavLink href={ROUTE.EXPERIENCE} variant={ACTION_VARIANT.OUTLINED}>
             MY EXPERIENCE
           </NavLink>
-          <NavLink href={ROUTE.CONTACT} outlined>
+          <NavLink href={ROUTE.CONTACT} variant={ACTION_VARIANT.OUTLINED}>
             GET IN TOUCH
           </NavLink>
         </Group>

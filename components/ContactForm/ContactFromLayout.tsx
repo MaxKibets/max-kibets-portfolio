@@ -2,11 +2,12 @@ import { FC } from "react";
 import clsx from "clsx";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import { Button, Input, Label, Textarea, Error } from "@/components/ui";
+import { Action, Input, Label, Textarea, Error } from "@/components/ui";
 
 import { FIELDS, RECAPTCHA_FIELD_NAME } from "./constants";
 import { ContactFormLayoutProps } from "./types";
 import css from "./contactFormLayout.module.css";
+import { ACTION_VARIANT } from "@/constants";
 
 const ContactFormLayout: FC<ContactFormLayoutProps> = ({
   register,
@@ -52,15 +53,15 @@ const ContactFormLayout: FC<ContactFormLayoutProps> = ({
         />
         {errors[RECAPTCHA_FIELD_NAME] && <Error>{errors[RECAPTCHA_FIELD_NAME]}</Error>}
       </div>
-      <Button
+      <Action
         type="submit"
         title="Click to send your message"
-        outlined
+        variant={ACTION_VARIANT.OUTLINED}
         className={css.button}
         disabled={pending}
       >
         SEND
-      </Button>
+      </Action>
     </div>
   </form>
 );

@@ -2,38 +2,29 @@
 
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
 
 import { usePageTransition } from "@/hooks";
 
 import { NavLinkProps } from "./types";
-import css from "./navlink.module.css";
+import Action from "../Action";
 
-const NavLink: FC<NavLinkProps> = ({
-  children,
-  href,
-  underlined,
-  outlined,
-  className,
-}) => {
+const NavLink: FC<NavLinkProps> = ({ children, href, className, variant }) => {
   const pathname = usePathname();
   const toNextPage = usePageTransition();
 
   return (
-    <a
+    <Action
       href={href}
       onClick={(e) => {
         e.preventDefault();
         toNextPage(href);
       }}
-      className={clsx(css.link, className, {
-        [css.active]: href === pathname,
-        [css.underlined]: underlined,
-        [css.outlined]: outlined,
-      })}
+      active={href === pathname}
+      variant={variant}
+      className={className}
     >
       {children}
-    </a>
+    </Action>
   );
 };
 

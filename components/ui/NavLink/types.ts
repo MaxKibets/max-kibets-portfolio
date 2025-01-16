@@ -1,8 +1,8 @@
-import { Route, WithChildren } from "@/types";
+import { ActionVariant, Route, WithChildren } from "@/types";
 
 export type NavLinkProps = WithChildren<{
   href: Route;
-  underlined?: boolean;
+  variant?: ActionVariant;
   outlined?: boolean;
   className?: string;
 }>;

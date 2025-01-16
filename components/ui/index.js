@@ -1,4 +1,3 @@
-import Button from "./Button";
 import NavLink from "./NavLink";
 import IconLabel from "./IconLabel";
 import Progress from "./Progress";
@@ -11,9 +10,10 @@ import Label from "./Label";
 import Input from "./Input";
 import Textarea from "./Textarea";
 import Error from "./Error";
+import Action from "./Action";
 
 export {
-  Button,
+  Action,
   NavLink,
   IconLabel,
   Progress,

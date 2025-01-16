@@ -90,8 +90,7 @@ a {
   cursor: pointer;
   color: var(--foreground-carroty);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--foreground-light);
   }
 }
