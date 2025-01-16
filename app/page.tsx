@@ -13,6 +13,7 @@ import {
 import { ACTION_VARIANT, CV_HREF, PAGE_TITLE, ROUTE } from "@/constants";
 
 import css from "./home.module.css";
+import Social from "@/components/Social/Social";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
         >
           <IconLabel prefixIcon={<VscSave />} text="download cv" />
         </Action>
+        <Social />
       </div>
       <section>
         <Heading>GREETING</Heading>

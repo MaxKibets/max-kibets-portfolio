@@ -12,3 +12,14 @@
   line-height: 0.8rem;
   gap: 1rem;
 }
+
+.links {
+  margin-left: auto;
+  padding: 0 0.5rem;
+}
+
+@media screen and (width <=600px) {
+  .decor {
+    display: none;
+  }
+}

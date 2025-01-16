@@ -84,11 +84,10 @@ main {
 }
 
 a {
-  text-decoration: underline;
-  text-underline-position: under;
+  text-decoration: none;
   transition: color 0.2s;
   cursor: pointer;
-  color: var(--foreground-carroty);
+  color: var(--foreground-yellow);
 
   &:hover {
     color: var(--foreground-light);
