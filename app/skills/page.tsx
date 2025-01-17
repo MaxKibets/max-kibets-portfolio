@@ -26,6 +26,7 @@ import { RiBearSmileFill } from "react-icons/ri";
 import { CommentedRows, Heading, IconLabel, List } from "@/components/ui";
 import { ListItem } from "@/types";
 import SkillsContainer from "@/components/SkillsContainer";
+import TypeWriter from "@/components/TypeWriter";
 
 const STACK = {
   GENERAL: [
@@ -77,8 +78,18 @@ const SkillsPage = () => {
     <SkillsContainer>
       <CommentedRows>
         <h2>TECH STACK</h2>
-        <p>A showcase of the tools and technologies I use to bring ideas to life.</p>
-        <p>Efficiently, creatively, and with a focus on quality.</p>
+        <TypeWriter
+          sequence={[
+            600,
+            "A showcase of the tools and technologies I use to bring ideas to life efficiently.",
+            1500,
+            "A showcase of the tools and technologies I use to bring ideas to life creatively.",
+            1500,
+            "A showcase of the tools and technologies I use to bring ideas to life with a focus on quality.",
+            1000,
+          ]}
+          repeat={Infinity}
+        />
       </CommentedRows>
       <section>
         <Heading withBracket>GENERAL</Heading>

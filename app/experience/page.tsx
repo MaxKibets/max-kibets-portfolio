@@ -1,3 +1,4 @@
+import TypeWriter from "@/components/TypeWriter";
 import { CommentedRows, Heading, List, Paragraph } from "@/components/ui";
 
 const EXP = [
@@ -41,12 +42,13 @@ const ExperiencePage = () => (
   <article>
     <CommentedRows>
       <h2>MY EXPERIENCE</h2>
-      <p>It all started with a fascination for how websites work.</p>
-      <p>
-        Since then, I’ve taken on challenges, learned new skills, and built projects that
-        I’m truly proud of.
-      </p>
-      <p>Here&apos;s a glimpse into where my journey has taken me so far.</p>
+      <TypeWriter
+        sequence={[
+          600,
+          "It all started with a fascination for how websites work.\n Since then, I've taken on challenges, learned new skills, and built projects that I’m truly proud of. \n Here's a glimpse into where my journey has taken me so far.",
+        ]}
+        repeat={Infinity}
+      />
     </CommentedRows>
     {EXP.map((item) => (
       <section key={item.COMPANY}>

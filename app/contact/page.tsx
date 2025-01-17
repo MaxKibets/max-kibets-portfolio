@@ -1,14 +1,19 @@
 import { CommentedRows } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
+import TypeWriter from "@/components/TypeWriter";
 
 const ContactPage = () => (
   <>
     <CommentedRows>
       <h2>GET IN TOUCH</h2>
-      <p>
-        Let’s connect! Whether you have a project in mind or just want to say hello, I’m
-        always happy to chat
-      </p>
+      <TypeWriter
+        sequence={[
+          600,
+          "Let's connect! Whether you have a project in mind or just want to say hello, I'malways happy to chat.",
+        ]}
+        repeat={Infinity}
+      />
+      <p></p>
     </CommentedRows>
     <ContactForm />
   </>

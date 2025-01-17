@@ -1,4 +1,5 @@
 import HomeContainer from "@/components/HomeContainer";
+import TypeWriter from "@/components/TypeWriter";
 import { CommentedRows, Heading, NavLink, Paragraph, Group } from "@/components/ui";
 import { ACTION_VARIANT, PAGE_TITLE, ROUTE } from "@/constants";
 
@@ -7,7 +8,20 @@ export default function Home() {
     <HomeContainer>
       <CommentedRows>
         <h2>Max Kibets - Frontend Developer</h2>
-        <p>Passionate about building web applications that are scalable and impactful.</p>
+        <p>
+          <TypeWriter
+            sequence={[
+              600,
+              "Passionate about building web applications that are impactful",
+              1500,
+              "Passionate about building web applications that are scalable",
+              1500,
+              "Passionate about building web applications that are high-quality",
+              1000,
+            ]}
+            repeat={Infinity}
+          />
+        </p>
       </CommentedRows>
       <section>
         <Heading>GREETING</Heading>
