@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  box-shadow: inset 1px 0 0 var(--border-light);
 
   &::before {
     content: ";";
@@ -11,6 +12,7 @@
   &::after {
     color: #c586a1;
     content: "]";
+    background-color: var(--background-light);
   }
 }
 

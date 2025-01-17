@@ -1,47 +1,14 @@
-import Image from "next/image";
-import { VscSave } from "react-icons/vsc";
-
-import {
-  CommentedRows,
-  Heading,
-  NavLink,
-  Action,
-  Paragraph,
-  Group,
-  IconLabel,
-} from "@/components/ui";
-import { ACTION_VARIANT, CV_HREF, PAGE_TITLE, ROUTE } from "@/constants";
-
-import css from "./home.module.css";
-import Social from "@/components/Social/Social";
+import HomeContainer from "@/components/HomeContainer";
+import { CommentedRows, Heading, NavLink, Paragraph, Group } from "@/components/ui";
+import { ACTION_VARIANT, PAGE_TITLE, ROUTE } from "@/constants";
 
 export default function Home() {
   return (
-    <article className={css.wrap}>
+    <HomeContainer>
       <CommentedRows>
         <h2>Max Kibets - Frontend Developer</h2>
         <p>Passionate about building web applications that are scalable and impactful.</p>
       </CommentedRows>
-      <div className={css.sidebar}>
-        <Image
-          src="/photo.jpg"
-          alt="Max Kibets"
-          width={148}
-          height={148}
-          className={css.photo}
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcvHzNfwAG4gL34mYCRwAAAABJRU5ErkJggg=="
-        />
-        <Action
-          href={CV_HREF}
-          target="_blank"
-          variant={ACTION_VARIANT.FILLED}
-          title="Cick to download"
-        >
-          <IconLabel prefixIcon={<VscSave />} text="download cv" />
-        </Action>
-        <Social />
-      </div>
       <section>
         <Heading>GREETING</Heading>
         <Paragraph>
@@ -81,6 +48,6 @@ export default function Home() {
           </NavLink>
         </Group>
       </section>
-    </article>
+    </HomeContainer>
   );
 }

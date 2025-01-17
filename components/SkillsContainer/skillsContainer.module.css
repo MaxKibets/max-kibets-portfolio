@@ -1,0 +1,14 @@
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  column-gap: 2rem;
+}
+
+.wrap > *:first-child {
+  grid-column: 1 / -1;
+}
+
+.wrap > *:not(:first-child) {
+  display: inline-block;
+  width: auto;
+}

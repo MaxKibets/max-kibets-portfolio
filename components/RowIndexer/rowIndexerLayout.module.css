@@ -15,7 +15,7 @@
 .number {
   min-width: 1rem;
   text-align: right;
-  color: var(--foreground-dark);
+  color: var(--border-light);
   line-height: var(--row-height);
 }
 

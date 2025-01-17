@@ -25,6 +25,7 @@ import { RiBearSmileFill } from "react-icons/ri";
 
 import { CommentedRows, Heading, IconLabel, List } from "@/components/ui";
 import { ListItem } from "@/types";
+import SkillsContainer from "@/components/SkillsContainer";
 
 const STACK = {
   GENERAL: [
@@ -73,7 +74,7 @@ const listItemRenderer = ([text, href, icon]: ListItem) => (
 
 const SkillsPage = () => {
   return (
-    <article>
+    <SkillsContainer>
       <CommentedRows>
         <h2>TECH STACK</h2>
         <p>A showcase of the tools and technologies I use to bring ideas to life.</p>
@@ -91,7 +92,7 @@ const SkillsPage = () => {
         <Heading withBracket>TOOLS</Heading>
         <List items={STACK.TOOLS} itemRenderer={listItemRenderer} />
       </section>
-    </article>
+    </SkillsContainer>
   );
 };
 

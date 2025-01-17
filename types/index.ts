@@ -2,7 +2,7 @@ import { JSX } from "react";
 
 import { ACTION_VARIANT, HREF, ROUTE } from "@/constants";
 
-export type WithChildren<T = object> = T & { children?: React.ReactNode };
+export type WithChildren<T = object> = T & { children: React.ReactNode };
 
 export type Route = (typeof ROUTE)[keyof typeof ROUTE];
 
