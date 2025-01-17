@@ -1,6 +1,4 @@
-import { WithChildren } from "@/types";
-
-export type ExplorerLayoutProps = WithChildren<{
+export type ExplorerLayoutProps = {
   onClick: () => void;
   expanded: boolean;
-}>;
+};
