@@ -12,11 +12,11 @@ export default function Home() {
           <TypeWriter
             sequence={[
               600,
-              "Passionate about building web applications that are impactful",
+              "Passionate about building web apps that are impactful",
               1500,
-              "Passionate about building web applications that are scalable",
+              "Passionate about building web apps that are scalable",
               1500,
-              "Passionate about building web applications that are high-quality",
+              "Passionate about building web apps that are high-quality",
               1000,
             ]}
             repeat={Infinity}

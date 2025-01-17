@@ -9,7 +9,7 @@ const ContactPage = () => (
       <TypeWriter
         sequence={[
           600,
-          "Let's connect! Whether you have a project in mind or just want to say hello, I'malways happy to chat.",
+          "Let's connect! Whether you have a project in mind or just want to say hello, I'm always happy to chat.",
         ]}
         repeat={Infinity}
       />
