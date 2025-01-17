@@ -2,23 +2,25 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin-left: 1rem;
+
+  &::before {
+    content: ";";
+    order: 1;
+  }
 
   &::after {
-    content: ";";
+    color: #c586a1;
+    content: "]";
   }
 }
 
-.prefix,
-.suffix {
-  color: #c586a1;
-}
-
 .item {
+  width: 100%;
+  margin-left: 1rem;
   color: var(--foreground-carroty);
 }
 
-.itemWithComma::after {
+.withComma::after {
   content: ",\00a0";
   color: var(--foreground-light);
 }

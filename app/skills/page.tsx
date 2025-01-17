@@ -80,15 +80,15 @@ const SkillsPage = () => {
         <p>Efficiently, creatively, and with a focus on quality.</p>
       </CommentedRows>
       <section>
-        <Heading>GENERAL</Heading>
+        <Heading withBracket>GENERAL</Heading>
         <List items={STACK.GENERAL} itemRenderer={listItemRenderer} />
       </section>
       <section>
-        <Heading>ADDITIONAL</Heading>
+        <Heading withBracket>ADDITIONAL</Heading>
         <List items={STACK.ADDITIONAL} itemRenderer={listItemRenderer} />
       </section>
       <section>
-        <Heading>TOOLS</Heading>
+        <Heading withBracket>TOOLS</Heading>
         <List items={STACK.TOOLS} itemRenderer={listItemRenderer} />
       </section>
     </article>

@@ -50,16 +50,24 @@ const ExperiencePage = () => (
     </CommentedRows>
     {EXP.map((item) => (
       <section key={item.COMPANY}>
-        {Object.keys(item).map((key) => {
-          const content = item[key as keyof typeof item];
+        {Object.keys(item).map((value) => {
+          const content = item[value as keyof typeof item];
 
           return (
-            <div key={key}>
-              <Heading>{key}</Heading>
+            <div key={value}>
               {typeof content === "string" ? (
-                <Paragraph>{content}</Paragraph>
+                <>
+                  <Heading>{value}</Heading>
+                  <Paragraph>{content}</Paragraph>
+                </>
               ) : (
-                <List items={content} itemRenderer={(item) => <>&quot;{item}&quot;</>} />
+                <>
+                  <Heading withBracket>{value}</Heading>
+                  <List
+                    items={content}
+                    itemRenderer={(item) => <>&quot;{item}&quot;</>}
+                  />
+                </>
               )}
             </div>
           );

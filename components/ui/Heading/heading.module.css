@@ -4,7 +4,17 @@
   color: var(--foreground-blue);
 
   &::after {
-    content: ": ";
+    content: ":\00a0";
     color: var(--foreground-light);
+  }
+}
+
+.withBracket {
+  display: flex;
+
+  &::before {
+    content: "[";
+    color: var(--foreground-purple);
+    order: 1;
   }
 }

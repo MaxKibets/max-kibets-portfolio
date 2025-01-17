@@ -26,6 +26,7 @@
   --foreground-yellow: #dcdcaa;
   --foreground-turquoise: #80cbc4;
   --foreground-blue: #9cdcfe;
+  --foreground-purple: #c586a1;
 }
 
 /* @media (prefers-color-scheme: dark) {
