@@ -1,13 +1,14 @@
 :root {
   --size: 16px;
   --line-height: 1.375;
+  --page-height: calc(100vh - 20px);
   --header-height: calc(2.2rem + 1px);
   --tabs-height: 2.25rem;
   --footer-height: calc(1.5rem + 1px);
   --sidebar-width: 3rem;
   --row-height: calc(var(--size) * var(--line-height));
   --content-height: calc(
-    100vh - var(--header-height) - var(--tabs-height) - var(--footer-height)
+    var(--page-height) - var(--header-height) - var(--tabs-height) - var(--footer-height)
   );
   --z-layout: 666;
   --z-notif: 1488;
@@ -46,22 +47,25 @@ body {
 }
 
 body {
-  height: 100vh;
-  max-width: 1650px;
+  margin: auto;
+  height: var(--page-height);
+  padding: 10px 0;
+  max-width: 1440px;
   display: grid;
   grid-template:
     "header header" var(--header-height)
     "progress progress" auto "aside main" calc(
-      100vh - var(--header-height) - var(--footer-height)
+      var(--page-height) - var(--header-height) - var(--footer-height)
     )
     "footer footer" var(--footer-height) / auto 1fr;
   color: var(--foreground-light);
-  background: var(--background-light);
   font-family: var(--font-inconsolata), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-shadow: 1px 0 0 0 var(--border, -1px 0 0 0 var(--border));
   background-color: #000;
-  margin: auto;
+  background-image: radial-gradient(#222 1px, #111 1px);
+  background-size: 10px 10px;
 }
 
 main {
@@ -107,6 +111,7 @@ section:not(:last-child) {
 
 #react-tiny-toast-main-container {
   position: fixed;
+  left: 0;
   width: 100%;
   z-index: var(--z-notif);
 }
@@ -139,11 +144,21 @@ section:not(:last-child) {
     grid-template:
       "header header" var(--header-height)
       "progress progress" auto "aside main" calc(
-        100vh - var(--header-height) - var(--footer-height)
+        var(--page-height) - var(--header-height) - var(--footer-height)
       )
       "footer footer" var(--footer-height) / var(--sidebar-width) calc(
         100vw - var(--sidebar-width)
       );
+  }
+}
+
+@media screen and (width <=1440px) {
+  :root {
+    --page-height: 100vh;
+  }
+
+  body {
+    padding: 0;
   }
 }
 

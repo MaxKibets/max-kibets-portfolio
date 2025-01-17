@@ -11,7 +11,8 @@ export default function Home() {
         <p>
           <TypeWriter
             sequence={[
-              600,
+              "...",
+              800,
               "Passionate about building web apps that are impactful",
               1500,
               "Passionate about building web apps that are scalable",

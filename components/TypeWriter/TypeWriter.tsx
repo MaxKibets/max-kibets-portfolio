@@ -5,9 +5,9 @@ import { TypeAnimation } from "react-type-animation";
 
 import { TypeWriterProps } from "./types";
 
-const TypeWriter: FC<TypeWriterProps> = ({ sequence, preRenderFirstString, repeat }) => (
+const TypeWriter: FC<TypeWriterProps> = ({ sequence, repeat }) => (
   <TypeAnimation
-    preRenderFirstString={preRenderFirstString}
+    preRenderFirstString
     sequence={sequence}
     speed={75}
     repeat={repeat}

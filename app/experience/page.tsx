@@ -44,10 +44,10 @@ const ExperiencePage = () => (
       <h2>MY EXPERIENCE</h2>
       <TypeWriter
         sequence={[
-          600,
+          "...",
+          800,
           "It all started with a fascination for how websites work.\n Since then, I've taken on challenges, learned new skills, and built projects that I’m truly proud of. \n Here's a glimpse into where my journey has taken me so far.",
         ]}
-        repeat={Infinity}
       />
     </CommentedRows>
     {EXP.map((item) => (

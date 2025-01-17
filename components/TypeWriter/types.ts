@@ -4,6 +4,5 @@ export type Sequence = Array<
 
 export type TypeWriterProps = {
   sequence: Sequence;
-  preRenderFirstString?: boolean;
   repeat?: number;
 };

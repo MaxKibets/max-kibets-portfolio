@@ -80,7 +80,8 @@ const SkillsPage = () => {
         <h2>TECH STACK</h2>
         <TypeWriter
           sequence={[
-            600,
+            "...",
+            800,
             "A showcase of the tools and technologies I use to bring ideas to life efficiently.",
             1500,
             "A showcase of the tools and technologies I use to bring ideas to life creatively.",
