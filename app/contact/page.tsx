@@ -8,9 +8,8 @@ const ContactPage = () => (
       <h2>GET IN TOUCH</h2>
       <TypeWriter
         sequence={[
-          "...",
           800,
-          "Let's connect! Whether you have a project in mind or just want to say hello, I'm always happy to chat.",
+          "Let's connect! Whether you have a project in mind or just want to say hello, I'm always happy to chat",
         ]}
       />
       <p></p>

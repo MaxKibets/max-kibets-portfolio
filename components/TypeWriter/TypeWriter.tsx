@@ -5,14 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 
 import { TypeWriterProps } from "./types";
 
-const TypeWriter: FC<TypeWriterProps> = ({ sequence, repeat }) => (
-  <TypeAnimation
-    preRenderFirstString
-    sequence={sequence}
-    speed={75}
-    repeat={repeat}
-    style={{ whiteSpace: "pre-line" }}
-  />
+const TypeWriter: FC<TypeWriterProps> = (props) => (
+  <TypeAnimation speed={75} style={{ whiteSpace: "pre-line" }} {...props} />
 );
 
 export default TypeWriter;
