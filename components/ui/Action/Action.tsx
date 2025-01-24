@@ -18,6 +18,7 @@ const Action: FC<ActionProps> = ({
   onClick,
   title,
   target,
+  prefetch = true,
 }) => {
   const classNames = clsx(css.action, className, css[variant], {
     [css.disabled]: disabled,
@@ -32,6 +33,7 @@ const Action: FC<ActionProps> = ({
         onClick={onClick}
         title={title}
         target={target}
+        prefetch={prefetch}
       >
         {children}
       </Link>

@@ -3,9 +3,9 @@ import Image from "next/image";
 import { VscSave } from "react-icons/vsc";
 
 import { WithChildren } from "@/types";
-import { IconLabel } from "@/components/ui";
+import { Action, IconLabel } from "@/components/ui";
 import Social from "@/components/Social";
-import { CV_HREF } from "@/constants";
+import { ACTION_VARIANT, CV_HREF } from "@/constants";
 
 import css from "./homeContainer.module.css";
 
@@ -21,12 +21,14 @@ const HomeLayout: FC<WithChildren> = ({ children }) => (
         placeholder="blur"
         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcvHzNfwAG4gL34mYCRwAAAABJRU5ErkJggg=="
       />
-      <a href={CV_HREF} target="_blank" title="Cick to download">
+      <Action
+        href={CV_HREF}
+        target="_blank"
+        variant={ACTION_VARIANT.FILLED}
+        prefetch={false}
+      >
         <IconLabel prefixIcon={<VscSave />} text="download cv" />
-      </a>
-      {/* <Action href={CV_HREF} target="_blank" variant={ACTION_VARIANT.FILLED}>
-        <IconLabel prefixIcon={<VscSave />} text="download cv" />
-      </Action> */}
+      </Action>
       <Social />
     </div>
     {children}

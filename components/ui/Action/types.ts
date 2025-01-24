@@ -11,4 +11,5 @@ export type ActionProps = WithChildren<{
   onClick?: MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;
   title?: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
+  prefetch?: boolean;
 }>;
