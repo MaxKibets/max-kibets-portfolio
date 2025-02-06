@@ -12,8 +12,17 @@ const nextConfig: NextConfig = {
       cacheGroups: {
         node_modules: {
           test: /[\\/]node_modules[\\/]/,
-          name: "node_modules",
+          name(module: { context: string }): string {
+            const packageName = module.context.match(
+              /[\\/]node_modules[\\/](.*?)([\\/]|$)/,
+            );
+            return packageName?.[1] || "";
+          },
         },
+        // node_modules: {
+        //   test: /[\\/]node_modules[\\/]/,
+        //   name: "node_modules",
+        // },
         // nextClient: {
         //   test: /[\\/]node_modules[\\/]next[\\/]dist[\\/]client[\\/]/,
         //   name: "next-client",
