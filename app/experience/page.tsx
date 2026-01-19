@@ -3,6 +3,17 @@ import { CommentedRows, Heading, List, Paragraph } from "@/components/ui";
 
 const EXP = [
   {
+    COMPANY: "PixelTeh",
+    YEARS: "2025 - Present",
+    POSITION: "Frontend Developer",
+    DESCRIPTION: [
+      "React/Next.js/TanStack Query development",
+      "Developed scalable high-load solutions for a gambling sphere",
+      "Worked cooperatively with business analytics, design and QA team using Kanban methodology",
+      "Took part in a mentorship program and helped mentees improve their technical skills level",
+    ],
+  },
+  {
     COMPANY: "Together Networks",
     YEARS: "2020 - 2024",
     POSITION: "Frontend Developer",
