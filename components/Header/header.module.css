@@ -1,4 +1,5 @@
 .header {
+  border-radius: 0.5rem 0.5rem 0 0;
   grid-area: header;
   height: var(--header-height);
   display: flex;

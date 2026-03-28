@@ -21,6 +21,18 @@ export const metadata: Metadata = {
   title: "Max Kibets | Developer portfolio",
   description:
     "Software engineer with a passion for building web applications. Specialized in front-end development and have experience with React, TypeScript, Next.js, and more.",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "none",
+    },
+  },
 };
 
 export default async function RootLayout({
@@ -31,16 +43,18 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inconsolata.variable}>
-        <Header />
-        <ProgressBar>
-          <Sidebar />
-          <main>
-            <Tabs />
-            <RowIndexer>{children}</RowIndexer>
-          </main>
-        </ProgressBar>
-        <NotificationContainer />
-        <Footer />
+        <div className="layout">
+          <Header />
+          <ProgressBar>
+            <Sidebar />
+            <main>
+              <Tabs />
+              <RowIndexer>{children}</RowIndexer>
+            </main>
+          </ProgressBar>
+          <NotificationContainer />
+          <Footer />
+        </div>
       </body>
     </html>
   );

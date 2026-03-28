@@ -42,6 +42,7 @@ const nextConfig: NextConfig = {
       dynamic: 300, // 5 minutes do not refetch page data
     },
   },
+  turbopack: {},
 };
 
 const withBundleAnalyzerConfig = withBundleAnalyzer({

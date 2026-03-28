@@ -7,4 +7,9 @@
   &.inline {
     display: inline-flex;
   }
+
+  & > svg {
+    width: 1rem;
+    height: 1rem;
+  }
 }

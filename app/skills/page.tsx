@@ -20,7 +20,10 @@ import {
   SiEslint,
   SiNpm,
   SiYarn,
+  SiVite,
+  SiBiome,
 } from "react-icons/si";
+import { GiPalmTree } from "react-icons/gi";
 import { RiBearSmileFill } from "react-icons/ri";
 
 import { CommentedRows, Heading, IconLabel, List } from "@/components/ui";
@@ -40,6 +43,11 @@ const STACK = {
   ] as ListItem[],
   ADDITIONAL: [
     [
+      "TanStack Query",
+      "https://tanstack.com/query/latest",
+      <GiPalmTree key="tanstack-query" />,
+    ],
+    [
       "Apollo GraphQL",
       "https://www.apollographql.com/",
       <SiApollographql key="apollo" />,
@@ -50,17 +58,15 @@ const STACK = {
     ["TailwindCSS", "https://tailwindcss.com/", <SiTailwindcss key="tailwind" />],
     ["MaterialUI", "https://mui.com/", <SiMaterialdesign key="material-ui" />],
     ["Jest", "https://jestjs.io/", <SiJest key="jest" />],
-    [
-      "React testing library",
-      "https://testing-library.com",
-      <SiTestinglibrary key="rtl" />,
-    ],
+    ["Testing Library", "https://testing-library.com", <SiTestinglibrary key="rtl" />],
   ] as ListItem[],
   TOOLS: [
     ["Git", "https://git-scm.com/", <SiGit key="git" />],
     ["Bash", "https://en.wikipedia.org/wiki/Bash_(Unix_shell)", <SiGnubash key="bash" />],
     ["Docker", "https://www.docker.com/", <SiDocker key="docker" />],
     ["Webpack", "https://webpack.js.org/", <SiWebpack key="webpack" />],
+    ["Vite", "https://vitejs.dev/", <SiVite key="vite" />],
+    ["Biome", "https://biomejs.dev/", <SiBiome key="biome" />],
     ["Eslint", "https://eslint.org/", <SiEslint key="eslint" />],
     ["NPM", "https://www.npmjs.com/", <SiNpm key="npm" />],
     ["Yarn", "https://yarnpkg.com/", <SiYarn key="yarn" />],
