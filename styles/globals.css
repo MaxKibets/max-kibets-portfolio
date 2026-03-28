@@ -4,7 +4,7 @@
   --page-height: calc(100vh - 20px);
   --header-height: calc(2.2rem + 1px);
   --tabs-height: 2.25rem;
-  --footer-height: calc(1.5rem + 1px);
+  --footer-height: calc(2rem + 1px);
   --sidebar-width: 3rem;
   --row-height: calc(var(--size) * var(--line-height));
   --content-height: calc(
@@ -46,18 +46,27 @@ body {
   max-width: 100vw;
 }
 
+@property --spin-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes spin {
+  from {
+    --spin-angle: 0deg;
+  }
+
+  to {
+    --spin-angle: 360deg;
+  }
+}
+
 body {
+  display: flex;
   margin: auto;
   height: var(--page-height);
-  padding: 10px 0;
-  max-width: 1440px;
-  display: grid;
-  grid-template:
-    "header header" var(--header-height)
-    "progress progress" auto "aside main" calc(
-      var(--page-height) - var(--header-height) - var(--footer-height)
-    )
-    "footer footer" var(--footer-height) / auto 1fr;
+  padding: 10px;
   color: var(--foreground-light);
   font-family: var(--font-inconsolata), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -68,9 +77,44 @@ body {
   background-size: 10px 10px;
 }
 
+.layout {
+  margin: auto;
+  max-width: 1440px;
+  display: grid;
+  grid-template:
+    "header header" var(--header-height)
+    "progress progress" auto "aside main" calc(
+      var(--page-height) - var(--header-height) - var(--footer-height)
+    )
+    "footer footer" var(--footer-height) / auto 1fr;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--spin-angle),
+      #f00,
+      #ff7f00,
+      #ff0,
+      #0f0,
+      #00f,
+      #4b0082,
+      #9400d3,
+      #f00
+    );
+    animation: 15s spin linear infinite;
+    filter: blur(4rem);
+    opacity: 0.15;
+  }
+}
+
 main {
   grid-area: main;
   background-color: var(--background-light);
+  isolation: isolate;
 }
 
 * {
@@ -154,11 +198,11 @@ section:not(:last-child) {
 
 @media screen and (width <=1440px) {
   :root {
-    --page-height: 100vh;
+    --page-height: calc(100vh - 10px);
   }
 
   body {
-    padding: 0;
+    padding: 5px;
   }
 }
 

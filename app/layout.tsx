@@ -43,16 +43,18 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inconsolata.variable}>
-        <Header />
-        <ProgressBar>
-          <Sidebar />
-          <main>
-            <Tabs />
-            <RowIndexer>{children}</RowIndexer>
-          </main>
-        </ProgressBar>
-        <NotificationContainer />
-        <Footer />
+        <div className="layout">
+          <Header />
+          <ProgressBar>
+            <Sidebar />
+            <main>
+              <Tabs />
+              <RowIndexer>{children}</RowIndexer>
+            </main>
+          </ProgressBar>
+          <NotificationContainer />
+          <Footer />
+        </div>
       </body>
     </html>
   );
