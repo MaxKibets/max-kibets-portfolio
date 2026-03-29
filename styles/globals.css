@@ -79,6 +79,7 @@ body {
 
 .layout {
   margin: auto;
+  width: 100%;
   max-width: 1440px;
   display: grid;
   grid-template:
@@ -107,7 +108,7 @@ body {
     );
     animation: 15s spin linear infinite;
     filter: blur(4rem);
-    opacity: 0.15;
+    opacity: 0.3;
   }
 }
 
